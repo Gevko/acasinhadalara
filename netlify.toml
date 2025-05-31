@@ -7,7 +7,7 @@
 
   # Directory that contains the deploy-ready HTML files and assets.
   # This is relative to the base directory.
-  publish = "dist/geairas-house/browser"
+  publish = "dist/GaeirasRentingSPA/browser"
 
   # Default build command.
   command = "npm run build"
