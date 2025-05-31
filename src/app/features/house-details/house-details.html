@@ -11,32 +11,136 @@
     <p>{{ 'house.overview_description' | translate }}</p>
     <p>{{ 'house.overview_description2' | translate }}</p>
   </div>
-  <div class="house-image">
+  <div class="house-image clickable" (click)="openImageViewer({images: ['/images/exterior-1.jpg'], alts: ['Geairas House Exterior']}, 0)">
     <img loading="lazy" src="/images/exterior-1.jpg" alt="Geairas House Exterior">
+    <div class="image-overlay">
+      <i class="fas fa-search-plus"></i>
+    </div>
   </div>
 </section>
 
+<!-- Main Salon Section -->
+<section class="container main-salon">
+  <h2>{{ 'house.main_salon_title' | translate }}</h2>
+  <div class="salon-gallery">
+    <div class="gallery-item large clickable" (click)="openImageViewer(mainSalonImages, 0)">
+      <img loading="lazy" src="/images/living-1.jpg" alt="Main Salon">
+      <div class="image-overlay">
+        <i class="fas fa-search-plus"></i>
+      </div>
+    </div>
+    <div class="gallery-item clickable" (click)="openImageViewer(mainSalonImages, 1)">
+      <img loading="lazy" src="/images/living-2.jpg" alt="Main Salon Area">
+      <div class="image-overlay">
+        <i class="fas fa-search-plus"></i>
+      </div>
+    </div>
+    <div class="gallery-item clickable" (click)="openImageViewer(mainSalonImages, 2)">
+      <img loading="lazy" src="/images/living-3.jpg" alt="Main Salon View">
+      <div class="image-overlay">
+        <i class="fas fa-search-plus"></i>
+      </div>
+    </div>
+  </div>
+  <div class="salon-description">
+    <p>{{ 'house.main_salon_desc' | translate }}</p>
+  </div>
+</section>
+
+<!-- Second Main Room Section -->
+<section class="container second-living">
+  <h2>{{ 'house.second_living_title' | translate }}</h2>
+  <div class="living-gallery">
+    <div class="gallery-item clickable" (click)="openImageViewer(secondLivingImages, 0)">
+      <img loading="lazy" src="/images/salon-1.jpg" alt="Second Living Room">
+      <div class="image-overlay">
+        <i class="fas fa-search-plus"></i>
+      </div>
+    </div>
+    <div class="gallery-item clickable" (click)="openImageViewer(secondLivingImages, 1)">
+      <img loading="lazy" src="/images/salon-2.jpg" alt="Second Living Area">
+      <div class="image-overlay">
+        <i class="fas fa-search-plus"></i>
+      </div>
+    </div>
+    <div class="gallery-item clickable" (click)="openImageViewer(secondLivingImages, 2)">
+      <img loading="lazy" src="/images/salon-3.jpg" alt="Second Living View">
+      <div class="image-overlay">
+        <i class="fas fa-search-plus"></i>
+      </div>
+    </div>
+    <div class="gallery-item clickable" (click)="openImageViewer(secondLivingImages, 3)">
+      <img loading="lazy" src="/images/salon-4.jpg" alt="Second Living Detail">
+      <div class="image-overlay">
+        <i class="fas fa-search-plus"></i>
+      </div>
+    </div>
+  </div>
+  <div class="living-description">
+    <p>{{ 'house.second_living_desc' | translate }}</p>
+  </div>
+</section>
+
+<!-- Enhanced Pool Section -->
 <section class="exterior-features">
   <div class="container">
     <h2>{{ 'house.exterior_title' | translate }}</h2>
+    
+    <!-- Pool with multiple images -->
+    <div class="pool-feature">
+      <h3>{{ 'house.exterior.pool' | translate }}</h3>
+      <div class="pool-gallery">
+        <div class="gallery-item large clickable" (click)="openImageViewer(poolImages, 0)">
+          <img loading="lazy" src="/images/pool-2.jpg" alt="Swimming Pool">
+          <div class="image-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        <div class="gallery-item clickable" (click)="openImageViewer(poolImages, 1)">
+          <img loading="lazy" src="/images/pool-1.jpg" alt="Pool View">
+          <div class="image-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        <div class="gallery-item clickable" (click)="openImageViewer(poolImages, 2)">
+          <img loading="lazy" src="/images/pool-table.jpg" alt="Table Near Pool">
+          <div class="image-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+      <p>{{ 'house.exterior.pool_desc' | translate }}</p>
+    </div>
+    
+    <!-- Other exterior features -->
     <div class="exterior-grid">
       <div class="exterior-item">
-        <img loading="lazy" src="/images/pool-2.jpg" alt="Swimming Pool">
-        <h3>{{ 'house.exterior.pool' | translate }}</h3>
-        <p>{{ 'house.exterior.pool_desc' | translate }}</p>
-      </div>
-      <div class="exterior-item">
-        <img loading="lazy" src="/images/jacuzzi-2.jpg" alt="Jacuzzi">
+        <div class="exterior-image clickable" (click)="openImageViewer(exteriorImages, 0)">
+          <img loading="lazy" src="/images/jacuzzi-2.jpg" alt="Jacuzzi">
+          <div class="image-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
         <h3>{{ 'house.exterior.jacuzzi' | translate }}</h3>
         <p>{{ 'house.exterior.jacuzzi_desc' | translate }}</p>
       </div>
       <div class="exterior-item">
-        <img loading="lazy" src="/images/bbq-1.jpg" alt="BBQ Area">
+        <div class="exterior-image clickable" (click)="openImageViewer(exteriorImages, 1)">
+          <img loading="lazy" src="/images/bbq-1.jpg" alt="BBQ Area">
+          <div class="image-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
         <h3>{{ 'house.exterior.bbq' | translate }}</h3>
         <p>{{ 'house.exterior.bbq_desc' | translate }}</p>
       </div>
       <div class="exterior-item">
-        <img loading="lazy" src="/images/exterior-2.jpg" alt="Garden">
+        <div class="exterior-image clickable" (click)="openImageViewer(exteriorImages, 2)">
+          <img loading="lazy" src="/images/exterior-2.jpg" alt="Garden">
+          <div class="image-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
         <h3>{{ 'house.exterior.garden' | translate }}</h3>
         <p>{{ 'house.exterior.garden_desc' | translate }}</p>
       </div>
@@ -44,24 +148,93 @@
   </div>
 </section>
 
+<!-- Bedrooms Section -->
 <section class="rooms container">
   <h2>{{ 'house.rooms_title' | translate }}</h2>
-  <div class="room" *ngFor="let room of rooms; let i = index" [ngClass]="{'room-reverse': i % 2 !== 0}">
-    <div class="room-image">
-      <img loading="lazy" [src]="room.image" [alt]="room.name | translate">
+  
+  <!-- Master Bedroom with Private Bathroom -->
+  <div class="room">
+    <div class="room-gallery">
+      <div class="gallery-item main clickable" (click)="openImageViewer(masterRoomImages, 0)">
+        <img loading="lazy" src="/images/master-1.jpg" alt="Master Bedroom">
+        <div class="image-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="gallery-item clickable" (click)="openImageViewer(masterRoomImages, 1)">
+        <img loading="lazy" src="/images/master-bathroom.jpg" alt="Master Bathroom">
+        <div class="image-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
     </div>
     <div class="room-details">
-      <h3>{{ room.name | translate }}</h3>
-      <p>{{ room.description | translate }}</p>
+      <h3>{{ 'house.master_bedroom' | translate }}</h3>
+      <p>{{ 'house.master_bedroom_desc' | translate }}</p>
       <ul class="room-features">
-        <li *ngFor="let feature of room.features">
+        <li *ngFor="let feature of masterRoom.features">
           <i class="fas fa-check"></i> {{ feature | translate }}
         </li>
       </ul>
     </div>
   </div>
+  
+  <!-- Second and Third Bedrooms with Shared Bathroom -->
+  <div class="room room-reverse">
+    <div class="room-gallery multiple">
+      <div class="gallery-item clickable" (click)="openImageViewer(otherRoomsImages, 0)">
+        <img loading="lazy" src="/images/bedroom-3.jpg" alt="Second Bedroom">
+        <div class="image-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="gallery-item clickable" (click)="openImageViewer(otherRoomsImages, 1)">
+        <img loading="lazy" src="/images/bedroom-2.jpg" alt="Third Bedroom">
+        <div class="image-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="gallery-item clickable" (click)="openImageViewer(otherRoomsImages, 2)">
+        <img loading="lazy" src="/images/shared-bathroom.jpg" alt="Shared Bathroom">
+        <div class="image-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+    </div>
+    <div class="room-details">
+      <h3>{{ 'house.other_bedrooms' | translate }}</h3>
+      <p>{{ 'house.other_bedrooms_desc' | translate }}</p>
+      <div class="bedroom-tabs">
+        <div class="tab-buttons">
+          <button [class.active]="activeTab === 'second'" (click)="setActiveTab('second')">
+            {{ 'house.second_bedroom' | translate }}
+          </button>
+          <button [class.active]="activeTab === 'third'" (click)="setActiveTab('third')">
+            {{ 'house.third_bedroom' | translate }}
+          </button>
+        </div>
+        <div class="tab-content" *ngIf="activeTab === 'second'">
+          <p>{{ 'house.second_bedroom_desc' | translate }}</p>
+          <ul class="room-features">
+            <li *ngFor="let feature of otherRooms[0].features">
+              <i class="fas fa-check"></i> {{ feature | translate }}
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" *ngIf="activeTab === 'third'">
+          <p>{{ 'house.third_bedroom_desc' | translate }}</p>
+          <ul class="room-features">
+            <li *ngFor="let feature of otherRooms[1].features">
+              <i class="fas fa-check"></i> {{ feature | translate }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Amenities Section (Unchanged) -->
 <section class="amenities">
   <div class="container">
     <h2>{{ 'house.amenities_title' | translate }}</h2>
@@ -73,3 +246,21 @@
     </div>
   </div>
 </section>
+
+<!-- Call to Action -->
+<section class="cta-section">
+  <div class="container">
+    <h2>{{ 'home.ready_to_book' | translate }}</h2>
+    <p>{{ 'home.book_description' | translate }}</p>
+    <a routerLink="/contact" class="btn-primary">{{ 'home.book_now' | translate }}</a>
+  </div>
+</section>
+
+<!-- Image Viewer Component -->
+<app-image-viewer
+  [isOpen]="viewerOpen"
+  [images]="viewerImages"
+  [alts]="viewerAlts"
+  [currentIndex]="viewerCurrentIndex"
+  (closeEvent)="closeImageViewer()">
+</app-image-viewer>

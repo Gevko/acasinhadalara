@@ -1,6 +1,6 @@
 {
   "app": {
-    "title":"The cozy house of Gaeiras"
+    "title": "The cozy house of Gaeiras"
   },
   "nav": {
     "home": "Home",
@@ -38,7 +38,8 @@
     "features_title": "House Features",
     "overview_title": "House Overview",
     "overview_description": "Experience luxury and comfort in our spacious villa with stunning ocean views",
-    "bathroomws_count":"Bathrooms","rooms_count": "Bedrooms",
+    "bathroomws_count": "Bathrooms",
+    "rooms_count": "Bedrooms",
     "max_guests": "Max Guests",
     "house_size": "House Size",
     "garden_size": "Garden Size",
@@ -71,6 +72,12 @@
     "second_bedroom_desc": "Comfortable bedroom with queen-size bed and private balcony.",
     "third_bedroom": "Third Bedroom",
     "third_bedroom_desc": "Cozy bedroom with twin beds, perfect for children or guests.",
+    "main_salon_title": "Main Salon",
+    "main_salon_desc": "Our spacious main salon offers a comfortable and elegant space for relaxation and socializing with family and friends.",
+    "second_living_title": "Second Living Room",
+    "second_living_desc": "The second living area provides additional space for entertainment and relaxation, featuring modern amenities and comfortable furnishings.",
+    "other_bedrooms": "Guest Bedrooms",
+    "other_bedrooms_desc": "Our comfortable guest bedrooms offer a peaceful retreat with quality furnishings and a shared bathroom.",
     "features": {
       "ensuite": "En-suite bathroom",
       "king_bed": "King-size bed",

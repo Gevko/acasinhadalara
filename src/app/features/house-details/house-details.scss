@@ -187,3 +187,309 @@
     }
   }
 }
+
+// src/app/features/house-details/house-details.scss
+
+// Existing styles remain the same
+
+// New styles for salon and living room galleries
+.salon-gallery,
+.living-gallery,
+.pool-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  
+  .gallery-item {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    &.large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+}
+
+.salon-gallery {
+  .gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .gallery-item:not(.large) {
+    grid-column: span 2;
+  }
+}
+
+.living-gallery {
+  grid-template-columns: repeat(2, 1fr);
+  
+  .gallery-item {
+    aspect-ratio: 4/3;
+  }
+}
+
+.pool-feature {
+  margin-bottom: var(--spacing-xl);
+  
+  h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+  }
+  
+  .pool-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    
+    .gallery-item.large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+  
+  p {
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+}
+
+// Enhanced room styles for new layout
+.room {
+  .room-gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-md);
+    
+    .gallery-item {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      
+      &.main {
+        grid-row: span 1;
+      }
+    }
+    
+    &.multiple {
+      grid-template-columns: repeat(3, 1fr);
+      
+      .gallery-item {
+        aspect-ratio: 3/2;
+      }
+    }
+  }
+  
+  .bedroom-tabs {
+    margin-top: var(--spacing-md);
+    
+    .tab-buttons {
+      display: flex;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: var(--spacing-md);
+      
+      button {
+        background: none;
+        border: none;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-weight: 500;
+        color: var(--color-secondary);
+        cursor: pointer;
+        position: relative;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: transparent;
+          transition: background-color 0.3s ease;
+        }
+        
+        &.active {
+          color: var(--color-accent);
+          
+          &:after {
+            background-color: var(--color-accent);
+          }
+        }
+        
+        &:hover:not(.active) {
+          color: var(--color-primary);
+        }
+      }
+    }
+    
+    .tab-content {
+      animation: fadeIn 0.3s ease;
+    }
+  }
+}
+
+// Call to action section
+.cta-section {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  
+  h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  p {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--color-secondary);
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background-color: darken(#D4B254, 10%);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// Responsive styles
+@media (max-width: 992px) {
+  .salon-gallery,
+  .living-gallery,
+  .pool-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .room .room-gallery {
+    grid-template-columns: 1fr;
+    
+    &.multiple {
+      grid-template-columns: repeat(2, 1fr);
+      
+      .gallery-item:last-child {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .salon-gallery,
+  .living-gallery,
+  .pool-gallery {
+    grid-template-columns: 1fr;
+    
+    .gallery-item.large {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+  
+  .room .room-gallery.multiple {
+    grid-template-columns: 1fr;
+    
+    .gallery-item:last-child {
+      grid-column: span 1;
+    }
+  }
+}
+
+// src/app/features/house-details/house-details.scss
+
+// Add these styles to your existing SCSS
+
+// Clickable image styles
+.clickable {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+    i {
+      color: white;
+      font-size: 2rem;
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  &:hover .image-overlay {
+    opacity: 1;
+    
+    i {
+      transform: scale(1);
+    }
+  }
+}
+
+// Add this to existing exterior-item styles
+.exterior-item {
+  .exterior-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+// Update house-image styles
+.house-image {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+// Make sure room-image has position: relative
+.room-image {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
