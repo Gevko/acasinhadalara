@@ -1,8 +1,10 @@
 // src/app/features/contact/contact.component.ts
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, formatDate } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { EmailService } from '../../services/email/email.service';
+import { ContactFormData } from '../../entities/contact-form-data.dto';
 
 @Component({
   selector: 'app-contact',
@@ -19,9 +21,9 @@ export class ContactComponent implements OnInit {
   errorMessage = '';
   isSubmitting = false;
   today = new Date().toISOString().split('T')[0]; // For date input min value
-  email = 'test-geairas-house@gmail.com';
+  email = 'thehouseofgaeiras@gmail.com';
   
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private readonly emailService: EmailService) {}
   
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
@@ -51,7 +53,7 @@ export class ContactComponent implements OnInit {
     return 'contact.errors.invalid';
   }
   
-  onSubmit() {
+  async onSubmit() {
     this.formSubmitted = true;
     
     if (this.contactForm.invalid) {
@@ -61,49 +63,13 @@ export class ContactComponent implements OnInit {
     this.isSubmitting = true;
     
     // Create a FormData object to submit the form
-    const formData = new FormData();
-    Object.keys(this.contactForm.value).forEach(key => {
-      if (this.contactForm.value[key] !== null && this.contactForm.value[key] !== undefined) {
-        formData.append(key, this.contactForm.value[key]);
-      }
-    });
+
+    const contactFormData = this.contactForm.value as ContactFormData;
     
-    // Add form-name field which is required by Netlify
-    formData.append('form-name', 'contact');
-    
-    // Submit the form using fetch API
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as any).toString()
-    })
-    .then(response => {
-      this.isSubmitting = false;
-      if (response.ok) {
-        this.formSuccess = true;
-        this.formError = false;
-        this.contactForm.reset();
-        this.formSubmitted = false;
-        
-        // Reset form success message after 5 seconds
-        setTimeout(() => {
-          this.formSuccess = false;
-        }, 5000);
-      } else {
-        throw new Error('Form submission failed');
-      }
-    })
-    .catch(error => {
-      this.isSubmitting = false;
-      this.formError = true;
-      this.formSuccess = false;
-      this.errorMessage = error.message;
-      console.error('Error submitting form:', error);
-      
-      // Reset error message after 5 seconds
-      setTimeout(() => {
-        this.formError = false;
-      }, 5000);
+    await this.emailService.sendEmail(contactFormData).then((_) => {
+      this.isSubmitting=false;
+    }).catch((_e:any) => {
+      //#todo: catch ex
     });
   }
 }

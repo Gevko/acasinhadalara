@@ -1,15 +1,13 @@
-// src/app/core/services/email.service.ts
+// email.service.ts
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import emailjs from '@emailjs/browser';
 
 export interface ContactFormData {
   name: string;
   email: string;
   phone?: string;
-  checkIn?: Date;
-  checkOut?: Date;
+  checkIn?: string;
+  checkOut?: string;
   guests?: number;
   message: string;
 }
@@ -18,23 +16,34 @@ export interface ContactFormData {
   providedIn: 'root'
 })
 export class EmailService {
-  private readonly emailAddress = 'EMAIL DE TESTE';
-  
-  constructor(private http: HttpClient) {}
-  
-  // In a real application, this would connect to a backend service
-  // For now, we'll simulate sending an email
-  sendContactForm(formData: ContactFormData): Observable<any> {
-    console.log('Sending email to:', this.emailAddress);
-    console.log('Form data:', formData);
-    
-    // Simulate API call
-    return of({ success: true, message: 'Email sent successfully!' })
-      .pipe(
-        catchError(error => {
-          console.error('Error sending email:', error);
-          return of({ success: false, message: 'Failed to send email. Please try again.' });
-        })
+  private readonly SERVICE_ID = 'service_ryh34pa';
+  private readonly TEMPLATE_ID = 'template_mfillkc';
+  private readonly PUBLIC_KEY = 'S4hZwaeIWSZ9Au-ao';
+
+  constructor() {
+    emailjs.init(this.PUBLIC_KEY);
+  }
+
+  async sendEmail(data: ContactFormData) {
+    try {
+      const response = await emailjs.send(
+        this.SERVICE_ID,
+        this.TEMPLATE_ID,
+        {
+          name: data.name,
+          email: data.email,
+          phone: data.phone || 'Not provided',
+          checkIn: data.checkIn || 'Not specified',
+          checkOut: data.checkOut || 'Not specified',
+          guests: data.guests || 'Not specified',
+          message: data.message,
+          to_name: 'thehouseofgaeiras@gmail.com',
+          from_name: 'thehouseofgaeiras@gmail.com',
+        }
       );
+      return response;
+    } catch (error) {
+      throw error;
+    }
   }
 }

@@ -1,24 +1,18 @@
 // netlify/functions/get-reviews.js
-const fs = require('fs');
-const path = require('path');
+const { NetlifyFunction } = require('@netlify/functions');
 
-exports.handler = async function(event, context) {
+exports.handler = NetlifyFunction(async (event, context) => {
   try {
-    // Path to the reviews JSON file
-    const reviewsPath = path.join(__dirname, '..', '..', 'data', 'reviews.json');
+    // Get reviews from KV store
+    const { getStore } = context.clientContext.store;
+    const store = getStore('reviews');
     
-    // Check if file exists, if not create it with empty array
-    if (!fs.existsSync(reviewsPath)) {
-      const dataDir = path.join(__dirname, '..', '..', 'data');
-      if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
-      }
-      fs.writeFileSync(reviewsPath, JSON.stringify([]));
+    // Get all reviews or initialize if not exists
+    let reviews = await store.get('all');
+    if (!reviews) {
+      reviews = [];
+      await store.set('all', reviews);
     }
-    
-    // Read reviews from file
-    const reviewsData = fs.readFileSync(reviewsPath, 'utf8');
-    const reviews = JSON.parse(reviewsData);
     
     return {
       statusCode: 200,
@@ -33,4 +27,4 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({ error: 'Failed to load reviews' })
     };
   }
-};
+});
