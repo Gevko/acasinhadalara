@@ -2,7 +2,7 @@
 .hero {
   height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                    url('/assets/images/hero-bg.jpg');
+                    url('/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -138,7 +138,7 @@
 
 .cta-section {
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                    url('/assets/images/cta-bg.jpg');
+                    url('/images/pool-2.jpg');
   background-size: cover;
   background-position: center;
   padding: var(--spacing-xl) 0;

@@ -1,0 +1,190 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "house": "La Maison",
+    "gallery": "Galerie",
+    "location": "Emplacement",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Bienvenue à la Maison Geairas",
+    "subtitle": "Votre refuge parfait au Portugal",
+    "book_now": "Réserver Maintenant",
+    "features_title": "Caractéristiques de la Maison",
+    "overview_title": "Aperçu",
+    "overview_description": "Profitez du luxe et du confort dans notre spacieuse villa avec vue imprenable sur l'océan",
+    "rooms_count": "Chambres",
+    "max_guests": "Max. Invités",
+    "house_size": "Taille de la Maison",
+    "garden_size": "Taille du Jardin",
+    "ready_to_book": "Prêt à Réserver?",
+    "book_description": "Contactez-nous maintenant pour vérifier la disponibilité et faire votre réservation pour des vacances inoubliables."
+  },
+  "features": {
+    "rooms": "Chambres Confortables",
+    "rooms_desc": "Trois chambres magnifiquement meublées avec des équipements haut de gamme",
+    "pool": "Piscine",
+    "pool_desc": "Grande piscine privée parfaite pour la détente",
+    "jacuzzi": "Jacuzzi",
+    "jacuzzi_desc": "Jacuzzi luxueux avec vue sur l'océan",
+    "grill": "Barbecue",
+    "grill_desc": "Espace barbecue moderne pour les repas en plein air",
+    "ocean_view": "Vue sur l'Océan",
+    "ocean_view_desc": "Vues imprenables sur l'océan depuis plusieurs zones"
+  },
+  "house": {
+    "title": "La Maison",
+    "overview_title": "Aperçu",
+    "overview_description": "La Maison Geairas est une belle villa de 3 chambres située dans la charmante région de Gaeiras, au Portugal. Avec une vue imprenable sur l'océan et un extérieur spacieux, c'est le refuge parfait pour les familles et les amis.",
+    "overview_description2": "La maison offre des équipements modernes tout en conservant une atmosphère chaleureuse qui vous fera sentir comme chez vous pendant votre séjour.",
+    "exterior_title": "Espaces Extérieurs",
+    "rooms_title": "Chambres",
+    "amenities_title": "Équipements",
+    
+    "master_bedroom": "Chambre Principale",
+    "master_bedroom_desc": "Chambre principale spacieuse avec salle de bain privée et vue sur l'océan.",
+    "second_bedroom": "Deuxième Chambre",
+    "second_bedroom_desc": "Chambre confortable avec lit queen-size et balcon privé.",
+    "third_bedroom": "Troisième Chambre",
+    "third_bedroom_desc": "Chambre cosy avec lits jumeaux, parfaite pour les enfants ou les invités.",
+    
+    "features": {
+      "ensuite": "Salle de bain privée",
+      "king_bed": "Lit king-size",
+      "queen_bed": "Lit queen-size",
+      "twin_beds": "Lits jumeaux",
+      "ocean_view": "Vue sur l'océan",
+      "balcony": "Balcon privé",
+      "garden_view": "Vue sur le jardin"
+    },
+    
+    "exterior": {
+      "pool": "Piscine",
+      "pool_desc": "Grande piscine privée avec chaises longues et parasols.",
+      "jacuzzi": "Jacuzzi",
+      "jacuzzi_desc": "Jacuzzi relaxant avec vue imprenable sur l'océan.",
+      "bbq": "Espace Barbecue",
+      "bbq_desc": "Barbecue moderne avec espace repas en plein air.",
+      "garden": "Jardin",
+      "garden_desc": "Jardin paysager avec plantes locales et espaces de détente."
+    },
+    
+    "amenities": {
+      "wifi": "Wi-Fi Gratuit",
+      "parking": "Parking Privé",
+      "ac": "Climatisation",
+      "tv": "Smart TV",
+      "washer": "Machine à Laver",
+      "kitchen": "Cuisine Entièrement Équipée",
+      "coffee": "Machine à Café",
+      "shower": "Douche à Effet Pluie",
+      "living_room": "Salon Spacieux",
+      "beach_access": "Accès à la Plage"
+    }
+  },
+  "gallery": {
+    "title": "Galerie Photos",
+    "categories": {
+      "all": "Toutes les Photos",
+      "exterior": "Extérieur",
+      "interior": "Intérieur",
+      "bedrooms": "Chambres",
+      "amenities": "Équipements"
+    }
+  },
+  "location": {
+    "title": "Emplacement",
+    "about_gaeiras": "À Propos de Gaeiras",
+    "gaeiras_description": "Gaeiras est une charmante paroisse située dans la municipalité d'Óbidos, dans la région Ouest du centre du Portugal. Cette région pittoresque offre un mélange parfait de tranquillité rurale et de proximité avec de magnifiques plages.",
+    "gaeiras_description2": "La région est connue pour ses vignobles, ses vergers et ses paysages époustouflants. C'est une base idéale pour explorer la ville historique d'Óbidos et les belles plages de la Côte d'Argent.",
+    
+    "airport_distance": {
+      "title": "Aéroport",
+      "description": "80km de l'aéroport de Lisbonne (environ 1 heure de route)"
+    },
+    "beach_distance": {
+      "title": "Plages",
+      "description": "10km des plages les plus proches (Praia d'El Rey, Baleal)"
+    },
+    "amenities_distance": {
+      "title": "Commodités",
+      "description": "2km des supermarchés, restaurants et cafés"
+    },
+    
+    "nearby_attractions": "Attractions à Proximité",
+    "attractions": {
+      "obidos": {
+        "name": "Ville Médiévale d'Óbidos",
+        "description": "Explorez cette ville historique fortifiée avec ses ruelles étroites, ses maisons traditionnelles et son château médiéval.",
+        "distance": "5km (10 min en voiture)"
+      },
+      "beach": {
+        "name": "Plages de la Côte d'Argent",
+        "description": "Profitez des magnifiques plages de la Côte d'Argent portugaise, parfaites pour le surf et la détente.",
+        "distance": "10km (15 min en voiture)"
+      },
+      "buddha": {
+        "name": "Jardin Buddha Eden",
+        "description": "Visitez le plus grand jardin oriental d'Europe avec des statues de Bouddha, des pagodes et des statues en terre cuite.",
+        "distance": "15km (20 min en voiture)"
+      },
+      "lagoon": {
+        "name": "Lagune d'Óbidos",
+        "description": "Découvrez cette lagune naturelle parfaite pour les sports nautiques, l'observation des oiseaux et les promenades pittoresques.",
+        "distance": "12km (15 min en voiture)"
+      }
+    },
+    
+    "getting_here": "Comment Venir",
+    "transport": {
+      "plane": {
+        "title": "En Avion",
+        "description": "Volez jusqu'à l'aéroport de Lisbonne, puis louez une voiture ou prenez un taxi jusqu'à Gaeiras (environ 1 heure de route)."
+      },
+      "car": {
+        "title": "En Voiture",
+        "description": "Depuis Lisbonne, prenez l'autoroute A8 en direction de Leiria, puis sortez à Óbidos et suivez les panneaux pour Gaeiras."
+      },
+      "bus": {
+        "title": "En Bus",
+        "description": "Des services réguliers de bus relient Lisbonne à Óbidos. De là, prenez un taxi local jusqu'à Gaeiras."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "get_in_touch": "Contactez-nous",
+    "description": "Vous avez des questions sur notre maison ou souhaitez faire une réservation? N'hésitez pas à nous contacter en utilisant le formulaire ci-dessous ou par l'une de nos méthodes de contact.",
+    "email": "Email",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "follow_us": "Suivez-nous",
+    "send_message": "Envoyer un Message",
+    "success_message": "Votre message a été envoyé avec succès! Nous vous répondrons bientôt.",
+    "error_message": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.",
+    
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone (optionnel)",
+      "check_in": "Date d'arrivée (optionnel)",
+      "check_out": "Date de départ (optionnel)",
+      "guests": "Nombre d'invités (optionnel)",
+      "message": "Message",
+      "submit": "Envoyer le Message"
+    },
+    
+    "errors": {
+      "required": "Ce champ est obligatoire",
+      "email": "Veuillez entrer une adresse email valide",
+      "invalid": "Veuillez entrer des informations valides"
+    }
+  },
+  "footer": {
+    "description": "Votre refuge parfait à Gaeiras, Portugal. Villa de luxe avec piscine, jacuzzi et vue sur l'océan.",
+    "quick_links": "Liens Rapides",
+    "contact": "Informations de Contact",
+    "follow_us": "Suivez-nous",
+    "rights": "Tous Droits Réservés"
+  }
+}

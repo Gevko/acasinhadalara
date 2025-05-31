@@ -18,6 +18,7 @@ export class ContactComponent {
   formSuccess = false;
   formError = false;
   errorMessage = '';
+  email = 'acasinhadalara@gmail.com';
   
   constructor(
     private fb: FormBuilder,
