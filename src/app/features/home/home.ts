@@ -53,8 +53,9 @@ export class HomeComponent {
 
   highlights: Highlight[] = [
     { value: '3', label: 'home.rooms_count' },
+    {value: '6', label: 'home.bathroomws_count'},
     { value: '8', label: 'home.max_guests' },
-    { value: '200m²', label: 'home.house_size' },
-    { value: '500m²', label: 'home.garden_size' }
+    { value: '320m²', label: 'home.house_size' },
+    { value: '650m²', label: 'home.garden_size' }
   ];
 }
