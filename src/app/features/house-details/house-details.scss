@@ -1,0 +1,189 @@
+// src/app/features/house-details/house-details.scss
+.house-banner {
+  height: 50vh;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                    url('/assets/images/house-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.house-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl) 0;
+  
+  .house-description {
+    h2 {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    p {
+      margin-bottom: var(--spacing-md);
+      line-height: 1.8;
+    }
+  }
+  
+  .house-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+}
+
+.exterior-features {
+  background-color: #f9f9f9;
+  padding: var(--spacing-xl) 0;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+.exterior-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  
+  .exterior-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+    
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    h3 {
+      padding: var(--spacing-md) var(--spacing-md) var(--spacing-xs);
+    }
+    
+    p {
+      padding: 0 var(--spacing-md) var(--spacing-md);
+      color: var(--color-secondary);
+    }
+  }
+}
+
+.rooms {
+  padding: var(--spacing-xl) 0;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+.room {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  
+  &.room-reverse {
+    direction: rtl;
+    
+    .room-details {
+      direction: ltr;
+    }
+  }
+  
+  .room-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+  
+  .room-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    h3 {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    p {
+      margin-bottom: var(--spacing-md);
+      line-height: 1.8;
+    }
+  }
+}
+
+.room-features {
+  list-style: none;
+  
+  li {
+    margin-bottom: var(--spacing-xs);
+    
+    i {
+      color: var(--color-accent);
+      margin-right: var(--spacing-xs);
+    }
+  }
+}
+
+.amenities {
+  background-color: #f9f9f9;
+  padding: var(--spacing-xl) 0;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--spacing-lg);
+  
+  .amenity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    i {
+      font-size: 2rem;
+      color: var(--color-accent);
+      margin-bottom: var(--spacing-sm);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .house-overview {
+    grid-template-columns: 1fr;
+  }
+  
+  .room {
+    grid-template-columns: 1fr;
+    
+    &.room-reverse {
+      direction: ltr;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<!-- src/app/features/house-details/house-details.html -->
+<div class="house-banner">
+  <div class="container">
+    <h1>{{ 'house.title' | translate }}</h1>
+  </div>
+</div>
+
+<section class="container house-overview">
+  <div class="house-description">
+    <h2>{{ 'house.overview_title' | translate }}</h2>
+    <p>{{ 'house.overview_description' | translate }}</p>
+    <p>{{ 'house.overview_description2' | translate }}</p>
+  </div>
+  <div class="house-image">
+    <img src="assets/images/house-exterior.jpg" alt="Geairas House Exterior">
+  </div>
+</section>
+
+<section class="exterior-features">
+  <div class="container">
+    <h2>{{ 'house.exterior_title' | translate }}</h2>
+    <div class="exterior-grid">
+      <div class="exterior-item">
+        <img src="assets/images/pool.jpg" alt="Swimming Pool">
+        <h3>{{ 'house.exterior.pool' | translate }}</h3>
+        <p>{{ 'house.exterior.pool_desc' | translate }}</p>
+      </div>
+      <div class="exterior-item">
+        <img src="assets/images/jacuzzi.jpg" alt="Jacuzzi">
+        <h3>{{ 'house.exterior.jacuzzi' | translate }}</h3>
+        <p>{{ 'house.exterior.jacuzzi_desc' | translate }}</p>
+      </div>
+      <div class="exterior-item">
+        <img src="assets/images/bbq.jpg" alt="BBQ Area">
+        <h3>{{ 'house.exterior.bbq' | translate }}</h3>
+        <p>{{ 'house.exterior.bbq_desc' | translate }}</p>
+      </div>
+      <div class="exterior-item">
+        <img src="assets/images/garden.jpg" alt="Garden">
+        <h3>{{ 'house.exterior.garden' | translate }}</h3>
+        <p>{{ 'house.exterior.garden_desc' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rooms container">
+  <h2>{{ 'house.rooms_title' | translate }}</h2>
+  <div class="room" *ngFor="let room of rooms; let i = index" [ngClass]="{'room-reverse': i % 2 !== 0}">
+    <div class="room-image">
+      <img [src]="room.image" [alt]="room.name | translate">
+    </div>
+    <div class="room-details">
+      <h3>{{ room.name | translate }}</h3>
+      <p>{{ room.description | translate }}</p>
+      <ul class="room-features">
+        <li *ngFor="let feature of room.features">
+          <i class="fas fa-check"></i> {{ feature | translate }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="amenities">
+  <div class="container">
+    <h2>{{ 'house.amenities_title' | translate }}</h2>
+    <div class="amenities-grid">
+      <div class="amenity" *ngFor="let amenity of amenities">
+        <i [class]="amenity.icon"></i>
+        <span>{{ amenity.name | translate }}</span>
+      </div>
+    </div>
+  </div>
+</section>

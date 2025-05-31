@@ -1,0 +1,26 @@
+# Create netlify.toml file
+cat > netlify.toml << 'EOL'
+# Settings in the [build] context are global and applied to all contexts
+# unless otherwise overridden by more specific contexts.
+[build]
+  # Directory to change to before starting a build.
+  # This is where we will look for package.json/.nvmrc/etc.
+  base = "/"
+
+  # Directory that contains the deploy-ready HTML files and assets.
+  # This is relative to the base directory.
+  publish = "dist/geairas-house/browser"
+
+  # Default build command.
+  command = "npm run build"
+
+# Redirects and headers are GLOBAL for all builds – they do not get scoped to
+# contexts no matter where you define them in the file.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "18"
+EOL

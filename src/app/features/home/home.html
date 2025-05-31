@@ -1,0 +1,48 @@
+<!-- src/app/features/home/home.component.html -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>{{ 'home.welcome' | translate }}</h1>
+    <p>{{ 'home.subtitle' | translate }}</p>
+    <a routerLink="/contact" class="cta-button">
+      {{ 'home.book_now' | translate }}
+    </a>
+  </div>
+</section>
+
+<section class="features container">
+  <h2>{{ 'home.features_title' | translate }}</h2>
+  <div class="features-grid">
+    <div class="feature-card" *ngFor="let feature of features">
+      <div class="feature-icon">
+        <i [class]="feature.icon"></i>
+      </div>
+      <h3>{{ feature.title | translate }}</h3>
+      <p>{{ feature.description | translate }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="overview container">
+  <div class="overview-content">
+    <h2>{{ 'home.overview_title' | translate }}</h2>
+    <p>{{ 'home.overview_description' | translate }}</p>
+    <div class="overview-highlights">
+      <div class="highlight" *ngFor="let highlight of highlights">
+        <strong>{{ highlight.value }}</strong>
+        <span>{{ highlight.label | translate }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>{{ 'home.ready_to_book' | translate }}</h2>
+      <p>{{ 'home.book_description' | translate }}</p>
+      <a routerLink="/contact" class="cta-button">
+        {{ 'home.book_now' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

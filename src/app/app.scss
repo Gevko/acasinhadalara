@@ -1,0 +1,204 @@
+// src/app/app.component.scss
+:host {
+  display: block;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  margin-top: 80px; // Height of header
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+// Global component styles
+// These styles affect components throughout the app
+
+// Banner styles used across multiple pages
+.page-banner {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+}
+
+// Section styles
+.section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-secondary);
+  }
+}
+
+// Card styles
+.card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: var(--spacing-md);
+  }
+  
+  .card-title {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .card-text {
+    color: var(--color-secondary);
+  }
+}
+
+// Button styles
+.cta-button {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  
+  &:hover {
+    background-color: darken(#D4B254, 10%);
+    color: white;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  
+  &:hover {
+    background-color: var(--color-accent);
+    color: white;
+  }
+}
+
+// Form styles
+.form-group {
+  margin-bottom: var(--spacing-md);
+  
+  label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+    
+    &.invalid {
+      border-color: #dc3545;
+    }
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: var(--spacing-xs);
+  }
+}
+
+// Alert styles
+.alert {
+  padding: var(--spacing-md);
+  border-radius: 4px;
+  margin-bottom: var(--spacing-md);
+  
+  &.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  &.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  &.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .page-banner {
+    height: 30vh;
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  .section-title {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}

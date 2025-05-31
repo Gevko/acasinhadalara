@@ -1,0 +1,88 @@
+<!-- src/app/features/location/location.html -->
+<div class="location-banner">
+  <div class="container">
+    <h1>{{ 'location.title' | translate }}</h1>
+  </div>
+</div>
+
+<section class="container location-overview">
+  <div class="location-description">
+    <h2>{{ 'location.about_gaeiras' | translate }}</h2>
+    <p>{{ 'location.gaeiras_description' | translate }}</p>
+    <p>{{ 'location.gaeiras_description2' | translate }}</p>
+    
+    <div class="location-highlights">
+      <div class="highlight">
+        <i class="fas fa-plane"></i>
+        <h3>{{ 'location.airport_distance.title' | translate }}</h3>
+        <p>{{ 'location.airport_distance.description' | translate }}</p>
+      </div>
+      <div class="highlight">
+        <i class="fas fa-umbrella-beach"></i>
+        <h3>{{ 'location.beach_distance.title' | translate }}</h3>
+        <p>{{ 'location.beach_distance.description' | translate }}</p>
+      </div>
+      <div class="highlight">
+        <i class="fas fa-store"></i>
+        <h3>{{ 'location.amenities_distance.title' | translate }}</h3>
+        <p>{{ 'location.amenities_distance.description' | translate }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="map-container" #mapContainer></div>
+</section>
+
+<section class="attractions">
+  <div class="container">
+    <h2>{{ 'location.nearby_attractions' | translate }}</h2>
+    <div class="attractions-grid">
+      <div class="attraction-card" *ngFor="let attraction of attractions">
+        <img [src]="attraction.image" [alt]="attraction.name | translate">
+        <div class="attraction-content">
+          <h3>{{ attraction.name | translate }}</h3>
+          <p class="attraction-distance">
+            <i class="fas fa-car"></i> {{ attraction.distance | translate }}
+          </p>
+          <p>{{ attraction.description | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container getting-here">
+  <h2>{{ 'location.getting_here' | translate }}</h2>
+  
+  <div class="transport-options">
+    <div class="transport-option">
+      <div class="transport-icon">
+        <i class="fas fa-plane"></i>
+      </div>
+      <div class="transport-content">
+        <h3>{{ 'location.transport.plane.title' | translate }}</h3>
+        <p>{{ 'location.transport.plane.description' | translate }}</p>
+      </div>
+    </div>
+    
+    <div class="transport-option">
+      <div class="transport-icon">
+        <i class="fas fa-car"></i>
+      </div>
+      <div class="transport-content">
+        <h3>{{ 'location.transport.car.title' | translate }}</h3>
+        <p>{{ 'location.transport.car.description' | translate }}</p>
+      </div>
+    </div>
+    
+    <div class="transport-option">
+      <div class="transport-icon">
+        <i class="fas fa-bus"></i>
+      </div>
+      <div class="transport-content">
+        <h3>{{ 'location.transport.bus.title' | translate }}</h3>
+        <p>{{ 'location.transport.bus.description' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>

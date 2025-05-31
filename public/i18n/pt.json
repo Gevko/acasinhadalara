@@ -1,0 +1,190 @@
+{
+  "nav": {
+    "home": "Início",
+    "house": "A Casa",
+    "gallery": "Galeria",
+    "location": "Localização",
+    "contact": "Contacto"
+  },
+  "home": {
+    "welcome": "Bem-vindo à Casa Geairas",
+    "subtitle": "Seu refúgio perfeito em Portugal",
+    "book_now": "Reserve Agora",
+    "features_title": "Características da Casa",
+    "overview_title": "Visão Geral",
+    "overview_description": "Experimente luxo e conforto em nossa espaçosa vila com vistas deslumbrantes para o oceano",
+    "rooms_count": "Quartos",
+    "max_guests": "Máx. Hóspedes",
+    "house_size": "Tamanho da Casa",
+    "garden_size": "Tamanho do Jardim",
+    "ready_to_book": "Pronto para Reservar?",
+    "book_description": "Entre em contato conosco agora para verificar a disponibilidade e fazer sua reserva para umas férias inesquecíveis."
+  },
+  "features": {
+    "rooms": "Quartos Confortáveis",
+    "rooms_desc": "Três quartos lindamente mobiliados com comodidades premium",
+    "pool": "Piscina",
+    "pool_desc": "Grande piscina privativa perfeita para relaxamento",
+    "jacuzzi": "Jacuzzi",
+    "jacuzzi_desc": "Jacuzzi luxuoso com vista para o oceano",
+    "grill": "Churrasqueira",
+    "grill_desc": "Área de churrasco moderna para refeições ao ar livre",
+    "ocean_view": "Vista para o Mar",
+    "ocean_view_desc": "Vistas deslumbrantes do oceano de várias áreas"
+  },
+  "house": {
+    "title": "A Casa",
+    "overview_title": "Visão Geral",
+    "overview_description": "A Casa Geairas é uma bela vila de 3 quartos localizada na encantadora área de Gaeiras, Portugal. Com vistas deslumbrantes para o oceano e um exterior espaçoso, é o refúgio perfeito para famílias e amigos.",
+    "overview_description2": "A casa possui comodidades modernas enquanto mantém uma atmosfera aconchegante que fará você se sentir em casa durante sua estadia.",
+    "exterior_title": "Espaços Exteriores",
+    "rooms_title": "Quartos",
+    "amenities_title": "Comodidades",
+    
+    "master_bedroom": "Quarto Principal",
+    "master_bedroom_desc": "Quarto principal espaçoso com banheiro privativo e vistas para o oceano.",
+    "second_bedroom": "Segundo Quarto",
+    "second_bedroom_desc": "Quarto confortável com cama de casal e varanda privativa.",
+    "third_bedroom": "Terceiro Quarto",
+    "third_bedroom_desc": "Quarto aconchegante com camas de solteiro, perfeito para crianças ou hóspedes.",
+    
+    "features": {
+      "ensuite": "Banheiro privativo",
+      "king_bed": "Cama king-size",
+      "queen_bed": "Cama queen-size",
+      "twin_beds": "Camas de solteiro",
+      "ocean_view": "Vista para o mar",
+      "balcony": "Varanda privativa",
+      "garden_view": "Vista para o jardim"
+    },
+    
+    "exterior": {
+      "pool": "Piscina",
+      "pool_desc": "Grande piscina privativa com espreguiçadeiras e guarda-sóis.",
+      "jacuzzi": "Jacuzzi",
+      "jacuzzi_desc": "Jacuzzi relaxante com vistas deslumbrantes para o oceano.",
+      "bbq": "Área de Churrasco",
+      "bbq_desc": "Churrasqueira moderna com área de refeições ao ar livre.",
+      "garden": "Jardim",
+      "garden_desc": "Jardim paisagístico com plantas locais e áreas de relaxamento."
+    },
+    
+    "amenities": {
+      "wifi": "Wi-Fi Gratuito",
+      "parking": "Estacionamento Privativo",
+      "ac": "Ar Condicionado",
+      "tv": "Smart TV",
+      "washer": "Máquina de Lavar",
+      "kitchen": "Cozinha Totalmente Equipada",
+      "coffee": "Máquina de Café",
+      "shower": "Chuveiro Tipo Chuva",
+      "living_room": "Sala de Estar Espaçosa",
+      "beach_access": "Acesso à Praia"
+    }
+  },
+  "gallery": {
+    "title": "Galeria de Fotos",
+    "categories": {
+      "all": "Todas as Fotos",
+      "exterior": "Exterior",
+      "interior": "Interior",
+      "bedrooms": "Quartos",
+      "amenities": "Comodidades"
+    }
+  },
+  "location": {
+    "title": "Localização",
+    "about_gaeiras": "Sobre Gaeiras",
+    "gaeiras_description": "Gaeiras é uma encantadora freguesia localizada no município de Óbidos, na região Oeste de Portugal central. Esta área pitoresca oferece uma combinação perfeita de tranquilidade rural e proximidade com belas praias.",
+    "gaeiras_description2": "A área é conhecida por suas vinhas, pomares e paisagens deslumbrantes. É uma base ideal para explorar a histórica cidade de Óbidos e as belas praias da Costa de Prata.",
+    
+    "airport_distance": {
+      "title": "Aeroporto",
+      "description": "80km do Aeroporto de Lisboa (aprox. 1 hora de carro)"
+    },
+    "beach_distance": {
+      "title": "Praias",
+      "description": "10km até as praias mais próximas (Praia d'El Rey, Baleal)"
+    },
+    "amenities_distance": {
+      "title": "Comodidades",
+      "description": "2km até supermercados, restaurantes e cafés"
+    },
+    
+    "nearby_attractions": "Atrações Próximas",
+    "attractions": {
+      "obidos": {
+        "name": "Vila Medieval de Óbidos",
+        "description": "Explore esta histórica cidade murada com suas ruas estreitas, casas tradicionais e castelo medieval.",
+        "distance": "5km (10 min de carro)"
+      },
+      "beach": {
+        "name": "Praias da Costa de Prata",
+        "description": "Desfrute das belas praias da Costa de Prata de Portugal, perfeitas para surf e relaxamento.",
+        "distance": "10km (15 min de carro)"
+      },
+      "buddha": {
+        "name": "Jardim Buddha Eden",
+        "description": "Visite o maior jardim oriental da Europa com estátuas de Buda, pagodes e estátuas de terracota.",
+        "distance": "15km (20 min de carro)"
+      },
+      "lagoon": {
+        "name": "Lagoa de Óbidos",
+        "description": "Descubra esta lagoa natural perfeita para esportes aquáticos, observação de aves e caminhadas cênicas.",
+        "distance": "12km (15 min de carro)"
+      }
+    },
+    
+    "getting_here": "Como Chegar",
+    "transport": {
+      "plane": {
+        "title": "De Avião",
+        "description": "Voe para o Aeroporto de Lisboa, depois alugue um carro ou pegue um táxi para Gaeiras (aprox. 1 hora de viagem)."
+      },
+      "car": {
+        "title": "De Carro",
+        "description": "De Lisboa, pegue a autoestrada A8 em direção a Leiria, depois saia em Óbidos e siga as placas para Gaeiras."
+      },
+      "bus": {
+        "title": "De Autocarro",
+        "description": "Serviços regulares de autocarro conectam Lisboa a Óbidos. De lá, pegue um táxi local para Gaeiras."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "get_in_touch": "Entre em Contacto",
+    "description": "Tem perguntas sobre nossa casa ou deseja fazer uma reserva? Sinta-se à vontade para nos contactar usando o formulário abaixo ou através de qualquer um dos nossos métodos de contacto.",
+    "email": "Email",
+    "phone": "Telefone",
+    "address": "Endereço",
+    "follow_us": "Siga-nos",
+    "send_message": "Enviar Mensagem",
+    "success_message": "Sua mensagem foi enviada com sucesso! Entraremos em contacto em breve.",
+    "error_message": "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.",
+    
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "phone": "Telefone (opcional)",
+      "check_in": "Data de Check-in (opcional)",
+      "check_out": "Data de Check-out (opcional)",
+      "guests": "Número de Hóspedes (opcional)",
+      "message": "Mensagem",
+      "submit": "Enviar Mensagem"
+    },
+    
+    "errors": {
+      "required": "Este campo é obrigatório",
+      "email": "Por favor, insira um endereço de email válido",
+      "invalid": "Por favor, insira informações válidas"
+    }
+  },
+  "footer": {
+    "description": "Seu refúgio perfeito em Gaeiras, Portugal. Vila de luxo com piscina, jacuzzi e vistas para o mar.",
+    "quick_links": "Links Rápidos",
+    "contact": "Informações de Contacto",
+    "follow_us": "Siga-nos",
+    "rights": "Todos os Direitos Reservados"
+  }
+}
