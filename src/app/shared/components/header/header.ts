@@ -25,6 +25,12 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
              routerLinkActive="active">
             {{ 'nav.house' | translate }}
           </a>
+
+  <a routerLink="/reviews" 
+     routerLinkActive="active">
+    {{ 'nav.reviews' | translate }}
+  </a>
+
           <a routerLink="/gallery" 
              routerLinkActive="active">
             {{ 'nav.gallery' | translate }}
@@ -126,4 +132,4 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
     }
   `]
 })
-export class HeaderComponent {}
+export class HeaderComponent { }

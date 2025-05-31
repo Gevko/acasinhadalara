@@ -7,10 +7,10 @@
 
   # Directory that contains the deploy-ready HTML files and assets.
   # This is relative to the base directory.
-  publish = "dist/GaeirasRentingSPA/browser"
+  publish = "dist/gaeiras-house-spa/browser"
 
   # Default build command.
-  command = "npm run build"
+  command = "npm ci && npx ng build"
 
 # Redirects and headers are GLOBAL for all builds – they do not get scoped to
 # contexts no matter where you define them in the file.
@@ -19,5 +19,23 @@
   to = "/index.html"
   status = 200
 
+# Add API redirect for reviews functionality
+[[redirects]]
+  from = "/api/reviews"
+  to = "/.netlify/functions/get-reviews"
+  status = 200
+
+# Environment variables
 [build.environment]
-  NODE_VERSION = "22"
+  NODE_VERSION = "20"
+
+# Enable Netlify Forms
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+# Configure functions directory
+[functions]
+  directory = "netlify/functions"

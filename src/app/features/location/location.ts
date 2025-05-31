@@ -11,11 +11,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './location.html',
   styleUrls: ['./location.scss']
 })
-export class LocationComponent implements AfterViewInit {
-  @ViewChild('mapContainer') mapContainer!: ElementRef;
-
-  mapUrl: SafeResourceUrl;
-
+export class LocationComponent {
   attractions = [
     {
       name: 'location.attractions.obidos.name',
@@ -43,32 +39,7 @@ export class LocationComponent implements AfterViewInit {
     }
   ];
 
-  constructor(private sanitizer: DomSanitizer) {
-    // Create a safe URL for the Google Maps embed
-    // Coordinates for Gaeiras, Portugal
-    const lat = 39.3635;
-    const lng = -9.1574;
-
-    // Create a safe URL with a place name instead of coordinates
-    // This often works better with Google Maps Embed
-    this.mapUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://www.google.com/maps/embed/v1/place?q=Gaeiras,+Portugal&zoom=14&maptype=roadmap&language=en`
-    );
-  }
-
-  ngAfterViewInit() {
-    // Here we would normally initialize a map like Google Maps or Leaflet
-    // For now, we'll just add a placeholder
-    // const mapPlaceholder = document.createElement('div');
-    // mapPlaceholder.className = 'map-placeholder';
-    // mapPlaceholder.innerHTML = `
-    //   <div class="map-content">
-    //     <i class="fas fa-map-marker-alt"></i>
-    //     <p>Geairas House, Gaeiras, Portugal</p>
-    //   </div>
-    // `;
-    // this.mapContainer.nativeElement.appendChild(mapPlaceholder);
-    // this.initMap();
+  constructor() {
   }
 
 }

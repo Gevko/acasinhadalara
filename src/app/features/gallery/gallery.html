@@ -20,7 +20,7 @@
       class="gallery-item" 
       *ngFor="let item of filteredItems; let i = index"
       (click)="openLightbox(i)">
-      <img [src]="item.src" [alt]="item.alt">
+      <img loading="lazy" [src]="item.src" [alt]="item.alt">
       <div class="gallery-overlay">
         <i class="fas fa-search-plus"></i>
       </div>
@@ -40,7 +40,7 @@
     </button>
     
     <div class="lightbox-image-container">
-      <img [src]="filteredItems[currentImageIndex].src" [alt]="filteredItems[currentImageIndex].alt">
+      <img loading="lazy" [src]="filteredItems[currentImageIndex].src" [alt]="filteredItems[currentImageIndex].alt">
       <p class="image-caption">{{ filteredItems[currentImageIndex].alt }}</p>
     </div>
     

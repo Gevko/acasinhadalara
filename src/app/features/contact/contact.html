@@ -65,12 +65,28 @@
       {{ errorMessage || 'contact.error_message' | translate }}
     </div>
     
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+    <!-- Updated form with Netlify attributes -->
+    <form 
+      [formGroup]="contactForm" 
+      (ngSubmit)="onSubmit()" 
+      class="contact-form"
+      name="contact" 
+      method="POST" 
+      data-netlify="true" 
+      netlify-honeypot="bot-field">
+      
+      <!-- Hidden fields for Netlify -->
+      <input type="hidden" name="form-name" value="contact">
+      <div hidden>
+        <input name="bot-field" formControlName="botField">
+      </div>
+      
       <div class="form-group">
         <label for="name">{{ 'contact.form.name' | translate }} *</label>
         <input 
           type="text" 
           id="name" 
+          name="name"
           formControlName="name"
           [class.invalid]="contactForm.get('name')?.invalid && (contactForm.get('name')?.touched || formSubmitted)">
         <div class="error-message" *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.touched || formSubmitted)">
@@ -83,6 +99,7 @@
         <input 
           type="email" 
           id="email" 
+          name="email"
           formControlName="email"
           [class.invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || formSubmitted)">
         <div class="error-message" *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || formSubmitted)">
@@ -92,30 +109,51 @@
       
       <div class="form-group">
         <label for="phone">{{ 'contact.form.phone' | translate }}</label>
-        <input type="tel" id="phone" formControlName="phone">
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone"
+          formControlName="phone">
       </div>
       
       <div class="form-row">
         <div class="form-group">
           <label for="checkIn">{{ 'contact.form.check_in' | translate }}</label>
-          <input type="date" id="checkIn" formControlName="checkIn" [min]="today">
+          <input 
+            type="date" 
+            id="checkIn" 
+            name="checkIn"
+            formControlName="checkIn" 
+            [min]="today">
         </div>
         
         <div class="form-group">
           <label for="checkOut">{{ 'contact.form.check_out' | translate }}</label>
-          <input type="date" id="checkOut" formControlName="checkOut" [min]="today">
+          <input 
+            type="date" 
+            id="checkOut" 
+            name="checkOut"
+            formControlName="checkOut" 
+            [min]="today">
         </div>
       </div>
       
       <div class="form-group">
         <label for="guests">{{ 'contact.form.guests' | translate }}</label>
-        <input type="number" id="guests" formControlName="guests" min="1" max="8">
+        <input 
+          type="number" 
+          id="guests" 
+          name="guests"
+          formControlName="guests" 
+          min="1" 
+          max="8">
       </div>
       
       <div class="form-group">
         <label for="message">{{ 'contact.form.message' | translate }} *</label>
         <textarea 
           id="message" 
+          name="message"
           formControlName="message" 
           rows="5"
           [class.invalid]="contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || formSubmitted)"></textarea>
@@ -124,7 +162,13 @@
         </div>
       </div>
       
-      <button type="submit" class="submit-button">
+      <button 
+        type="submit" 
+        class="submit-button"
+        [disabled]="isSubmitting">
+        <span *ngIf="isSubmitting">
+          <i class="fas fa-spinner fa-spin"></i>
+        </span>
         {{ 'contact.form.submit' | translate }}
       </button>
     </form>

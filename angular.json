@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "GaeirasRentingSPA": {
+    "gaeiras-house-spa": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "GaeirasRentingSPA:build:production"
+              "buildTarget": "gaeiras-house-spa:build:production"
             },
             "development": {
-              "buildTarget": "GaeirasRentingSPA:build:development"
+              "buildTarget": "gaeiras-house-spa:build:development"
             }
           },
           "defaultConfiguration": "development"

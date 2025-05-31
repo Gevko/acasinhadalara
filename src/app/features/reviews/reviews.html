@@ -1,0 +1,115 @@
+<!-- src/app/features/reviews/reviews.html -->
+<div class="reviews-banner">
+  <div class="container reviews-banner">
+    <h1>{{ 'reviews.title' | translate }}</h1>
+  </div>
+</div>
+
+<section class="container reviews-section">
+  <div class="reviews-intro">
+    <h2>{{ 'reviews.guest_experiences' | translate }}</h2>
+    <p>{{ 'reviews.description' | translate }}</p>
+  </div>
+  
+  <div class="reviews-content">
+    <div class="reviews-list">
+      <h3>{{ 'reviews.recent_reviews' | translate }}</h3>
+      
+      <div *ngIf="loading" class="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>{{ 'reviews.loading' | translate }}</p>
+      </div>
+      
+      <div *ngIf="!loading && reviews.length === 0" class="no-reviews">
+        <i class="fas fa-comment-slash"></i>
+        <p>{{ 'reviews.no_reviews' | translate }}</p>
+      </div>
+      
+      <div *ngFor="let review of reviews" class="review-card">
+        <div class="review-header">
+          <h4>{{ review.name }}</h4>
+          <div class="review-date">{{ review.date }}</div>
+        </div>
+        
+        <div class="review-rating">
+          <span *ngFor="let star of getStarArray(review.rating)" class="star filled">
+            <i class="fas fa-star"></i>
+          </span>
+          <span *ngFor="let star of getEmptyStarArray(review.rating)" class="star">
+            <i class="far fa-star"></i>
+          </span>
+        </div>
+        
+        <div class="review-comment">
+          <p>{{ review.comment }}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="review-form-container">
+      <h3>{{ 'reviews.leave_review' | translate }}</h3>
+      
+      <div *ngIf="formSuccess" class="alert success">
+        <i class="fas fa-check-circle"></i>
+        {{ 'reviews.success_message' | translate }}
+      </div>
+      
+      <div *ngIf="formError" class="alert error">
+        <i class="fas fa-exclamation-circle"></i>
+        {{ errorMessage || 'reviews.error_message' | translate }}
+      </div>
+      
+      <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()" class="review-form">
+        <div class="form-group">
+          <label for="name">{{ 'reviews.form.name' | translate }} *</label>
+          <input 
+            type="text" 
+            id="name" 
+            formControlName="name"
+            [class.invalid]="reviewForm.get('name')?.invalid && (reviewForm.get('name')?.touched || formSubmitted)">
+          <div class="error-message" *ngIf="reviewForm.get('name')?.invalid && (reviewForm.get('name')?.touched || formSubmitted)">
+            {{ 'reviews.errors.name_required' | translate }}
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>{{ 'reviews.form.rating' | translate }} *</label>
+          <div class="rating-input">
+            <div class="stars">
+              <input type="radio" id="star5" name="rating" value="5" formControlName="rating">
+              <label for="star5"><i class="fas fa-star"></i></label>
+              
+              <input type="radio" id="star4" name="rating" value="4" formControlName="rating">
+              <label for="star4"><i class="fas fa-star"></i></label>
+              
+              <input type="radio" id="star3" name="rating" value="3" formControlName="rating">
+              <label for="star3"><i class="fas fa-star"></i></label>
+              
+              <input type="radio" id="star2" name="rating" value="2" formControlName="rating">
+              <label for="star2"><i class="fas fa-star"></i></label>
+              
+              <input type="radio" id="star1" name="rating" value="1" formControlName="rating">
+              <label for="star1"><i class="fas fa-star"></i></label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="comment">{{ 'reviews.form.comment' | translate }} *</label>
+          <textarea 
+            id="comment" 
+            formControlName="comment" 
+            rows="5"
+            [class.invalid]="reviewForm.get('comment')?.invalid && (reviewForm.get('comment')?.touched || formSubmitted)"></textarea>
+          <div class="error-message" *ngIf="reviewForm.get('comment')?.invalid && (reviewForm.get('comment')?.touched || formSubmitted)">
+            {{ 'reviews.errors.comment_required' | translate }}
+          </div>
+        </div>
+        
+        <button type="submit" class="submit-button">
+          {{ 'reviews.form.submit' | translate }}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
