@@ -1,4 +1,7 @@
 {
+  "app": {
+    "title": "Das behagliche Haus von Gaeiras"
+  },
   "nav": {
     "home": "Startseite",
     "house": "Das Haus",
@@ -40,14 +43,12 @@
     "exterior_title": "Außenbereiche",
     "rooms_title": "Schlafzimmer",
     "amenities_title": "Annehmlichkeiten",
-    
     "master_bedroom": "Hauptschlafzimmer",
     "master_bedroom_desc": "Geräumiges Hauptschlafzimmer mit eigenem Bad und Meerblick.",
     "second_bedroom": "Zweites Schlafzimmer",
     "second_bedroom_desc": "Komfortables Schlafzimmer mit Doppelbett und privatem Balkon.",
     "third_bedroom": "Drittes Schlafzimmer",
     "third_bedroom_desc": "Gemütliches Schlafzimmer mit Einzelbetten, perfekt für Kinder oder Gäste.",
-    
     "features": {
       "ensuite": "Eigenes Badezimmer",
       "king_bed": "Kingsize-Bett",
@@ -57,7 +58,6 @@
       "balcony": "Privater Balkon",
       "garden_view": "Gartenblick"
     },
-    
     "exterior": {
       "pool": "Schwimmbad",
       "pool_desc": "Großer privater Pool mit Sonnenliegen und Sonnenschirmen.",
@@ -68,7 +68,6 @@
       "garden": "Garten",
       "garden_desc": "Landschaftlich gestalteter Garten mit lokalen Pflanzen und Entspannungsbereichen."
     },
-    
     "amenities": {
       "wifi": "Kostenloses WLAN",
       "parking": "Privater Parkplatz",
@@ -97,7 +96,6 @@
     "about_gaeiras": "Über Gaeiras",
     "gaeiras_description": "Gaeiras ist eine charmante Gemeinde in der Gemeinde Óbidos in der Oeste-Region Zentralportugals. Diese malerische Gegend bietet eine perfekte Mischung aus ländlicher Ruhe und Nähe zu wunderschönen Stränden.",
     "gaeiras_description2": "Die Gegend ist bekannt für ihre Weinberge, Obstgärten und atemberaubende Landschaften. Es ist ein idealer Ausgangspunkt, um die historische Stadt Óbidos und die wunderschönen Strände der Silberküste zu erkunden.",
-    
     "airport_distance": {
       "title": "Flughafen",
       "description": "80 km vom Flughafen Lissabon (ca. 1 Stunde Fahrt)"
@@ -110,7 +108,6 @@
       "title": "Annehmlichkeiten",
       "description": "2 km zu Supermärkten, Restaurants und Cafés"
     },
-    
     "nearby_attractions": "Sehenswürdigkeiten in der Nähe",
     "attractions": {
       "obidos": {
@@ -134,7 +131,6 @@
         "distance": "12 km (15 Min. Fahrt)"
       }
     },
-    
     "getting_here": "Anreise",
     "transport": {
       "plane": {
@@ -162,7 +158,6 @@
     "send_message": "Nachricht senden",
     "success_message": "Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden.",
     "error_message": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
-    
     "form": {
       "name": "Name",
       "email": "E-Mail",
@@ -173,7 +168,6 @@
       "message": "Nachricht",
       "submit": "Nachricht senden"
     },
-    
     "errors": {
       "required": "Dieses Feld ist erforderlich",
       "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",

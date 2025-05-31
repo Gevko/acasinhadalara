@@ -1,4 +1,7 @@
 {
+  "app": {
+    "title": "A casa aconchegante das Gaeiras"
+  },
   "nav": {
     "home": "Início",
     "house": "A Casa",
@@ -40,14 +43,12 @@
     "exterior_title": "Espaços Exteriores",
     "rooms_title": "Quartos",
     "amenities_title": "Comodidades",
-    
     "master_bedroom": "Quarto Principal",
     "master_bedroom_desc": "Quarto principal espaçoso com banheiro privativo e vistas para o oceano.",
     "second_bedroom": "Segundo Quarto",
     "second_bedroom_desc": "Quarto confortável com cama de casal e varanda privativa.",
     "third_bedroom": "Terceiro Quarto",
     "third_bedroom_desc": "Quarto aconchegante com camas de solteiro, perfeito para crianças ou hóspedes.",
-    
     "features": {
       "ensuite": "Banheiro privativo",
       "king_bed": "Cama king-size",
@@ -57,7 +58,6 @@
       "balcony": "Varanda privativa",
       "garden_view": "Vista para o jardim"
     },
-    
     "exterior": {
       "pool": "Piscina",
       "pool_desc": "Grande piscina privativa com espreguiçadeiras e guarda-sóis.",
@@ -68,7 +68,6 @@
       "garden": "Jardim",
       "garden_desc": "Jardim paisagístico com plantas locais e áreas de relaxamento."
     },
-    
     "amenities": {
       "wifi": "Wi-Fi Gratuito",
       "parking": "Estacionamento Privativo",
@@ -97,7 +96,6 @@
     "about_gaeiras": "Sobre Gaeiras",
     "gaeiras_description": "Gaeiras é uma encantadora freguesia localizada no município de Óbidos, na região Oeste de Portugal central. Esta área pitoresca oferece uma combinação perfeita de tranquilidade rural e proximidade com belas praias.",
     "gaeiras_description2": "A área é conhecida por suas vinhas, pomares e paisagens deslumbrantes. É uma base ideal para explorar a histórica cidade de Óbidos e as belas praias da Costa de Prata.",
-    
     "airport_distance": {
       "title": "Aeroporto",
       "description": "80km do Aeroporto de Lisboa (aprox. 1 hora de carro)"
@@ -110,7 +108,6 @@
       "title": "Comodidades",
       "description": "2km até supermercados, restaurantes e cafés"
     },
-    
     "nearby_attractions": "Atrações Próximas",
     "attractions": {
       "obidos": {
@@ -134,7 +131,6 @@
         "distance": "12km (15 min de carro)"
       }
     },
-    
     "getting_here": "Como Chegar",
     "transport": {
       "plane": {
@@ -162,7 +158,6 @@
     "send_message": "Enviar Mensagem",
     "success_message": "Sua mensagem foi enviada com sucesso! Entraremos em contacto em breve.",
     "error_message": "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.",
-    
     "form": {
       "name": "Nome",
       "email": "Email",
@@ -173,7 +168,6 @@
       "message": "Mensagem",
       "submit": "Enviar Mensagem"
     },
-    
     "errors": {
       "required": "Este campo é obrigatório",
       "email": "Por favor, insira um endereço de email válido",

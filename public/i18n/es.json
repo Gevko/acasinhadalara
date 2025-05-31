@@ -1,4 +1,7 @@
 {
+    "app": {
+    "title":"La casa cómoda de Gaeiras"
+  },
   "nav": {
     "home": "Inicio",
     "house": "La Casa",

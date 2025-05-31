@@ -1,4 +1,7 @@
 {
+  "app": {
+    "title":"The cozy house of Gaeiras"
+  },
   "nav": {
     "home": "Home",
     "house": "The House",
