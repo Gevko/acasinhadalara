@@ -1,0 +1,314 @@
+// src/app/features/reviews/reviews.scss
+
+.reviews-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/banner-reviews.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 80px;
+  
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.reviews-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.reviews-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    line-height: 1.6;
+  }
+}
+
+.reviews-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reviews-list {
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-primary);
+  }
+  
+  .loading-spinner {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    
+    i {
+      font-size: 2rem;
+      color: var(--color-accent);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    p {
+      color: var(--color-secondary);
+    }
+  }
+  
+  .no-reviews {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-light);
+    border-radius: var(--border-radius);
+    
+    i {
+      font-size: 3rem;
+      color: var(--color-secondary);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    p {
+      color: var(--color-secondary);
+      font-style: italic;
+    }
+  }
+}
+
+.review-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+    
+    h4 {
+      font-size: 1.2rem;
+      margin: 0;
+      color: var(--color-primary);
+    }
+    
+    .review-date {
+      color: var(--color-secondary);
+      font-size: 0.9rem;
+    }
+  }
+  
+  .review-rating {
+    margin-bottom: var(--spacing-md);
+    
+    .star {
+      color: #ddd;
+      margin-right: 2px;
+      
+      &.filled {
+        color: #FFD700; // Gold color for filled stars
+      }
+      
+      i {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  
+  .review-comment {
+    p {
+      margin: 0;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+  }
+}
+
+.review-form-container {
+  background-color: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-primary);
+  }
+  
+  .alert {
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    
+    i {
+      margin-right: var(--spacing-sm);
+      font-size: 1.2rem;
+    }
+    
+    &.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    &.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+  }
+}
+
+.review-form {
+  .form-group {
+    margin-bottom: var(--spacing-md);
+    
+    label {
+      display: block;
+      margin-bottom: var(--spacing-xs);
+      font-weight: 500;
+      color: var(--color-primary);
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: var(--spacing-sm);
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      
+      &:focus {
+        outline: none;
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 2px rgba(212, 178, 84, 0.2);
+      }
+      
+      &.invalid {
+        border-color: #dc3545;
+      }
+    }
+    
+    .error-message {
+      color: #dc3545;
+      font-size: 0.9rem;
+      margin-top: var(--spacing-xs);
+    }
+  }
+  
+  .rating-input {
+    .stars {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      
+      input[type="radio"] {
+        display: none;
+        
+        &:checked ~ label {
+          color: #FFD700;
+        }
+      }
+      
+      label {
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 0 var(--spacing-xs);
+        color: #ddd;
+        
+        &:hover, 
+        &:hover ~ label {
+          color: #FFD700;
+        }
+      }
+    }
+  }
+  
+  .submit-button {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background-color: darken(#D4B254, 10%);
+    }
+    
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .reviews-banner {
+    height: 200px;
+    
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  .reviews-intro {
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  .review-form-container,
+  .reviews-list {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .review-card {
+    padding: var(--spacing-md);
+  }
+}
+
+.reviews-banner {
+  height: 40vh;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                    url('/images/reviews-banner-1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  
+  h1 {
+    font-size: 3rem;
+  }
+}

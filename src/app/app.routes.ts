@@ -5,30 +5,30 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => 
-      import('./features/home/home').then(m => m.HomeComponent)
+      import('./pages/home/home').then(m => m.HomePageComponent)
   },
   {
     path: 'house',
     loadComponent: () => 
-      import('./features/house-details/house-details').then(m => m.HouseDetailsComponent)
+      import('./pages/house-details/house-details').then(m => m.HouseDetailsPageComponent)
   },
   {
     path: 'gallery',
     loadComponent: () => 
-      import('./features/gallery/gallery').then(m => m.GalleryComponent)
+      import('./pages/gallery/gallery').then(m => m.GalleryPageComponent)
   },
   {
     path: 'location',
     loadComponent: () => 
-      import('./features/location/location').then(m => m.LocationComponent)
+      import('./pages/location/location').then(m => m.LocationPageComponent)
   },
   {
     path: 'contact',
     loadComponent: () => 
-      import('./features/contact/contact').then(m => m.ContactComponent)
+      import('./pages/contact/contact').then(m => m.ContactPageComponent)
   },
     {
     path: 'reviews',
-    loadComponent: () => import('./features/reviews/reviews').then(c => c.ReviewsComponent)
+    loadComponent: () => import('./pages/reviews/reviews').then(c => c.ReviewsPageComponent)
   },
 ];
