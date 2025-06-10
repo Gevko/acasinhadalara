@@ -62,7 +62,6 @@ import { AvailabilityCheckerService } from '../../api/availability/availability.
                   type="text" 
                   id="checkIn" 
                   [value]="formatDate(checkInDate)"
-                  readonly
                   (click)="showCalendar = true">
                 <i class="fas fa-calendar-alt"></i>
               </div>
@@ -75,34 +74,9 @@ import { AvailabilityCheckerService } from '../../api/availability/availability.
                   type="text" 
                   id="checkOut" 
                   [value]="formatDate(checkOutDate)"
-                  readonly
                   (click)="showCalendar = true">
                 <i class="fas fa-calendar-alt"></i>
               </div>
-            </div>
-          </div>
-          
-          <div *ngIf="showCalendar" class="calendar-popup">
-            <div class="calendar-popup-header">
-              <h4>{{ 'contact.form.select_dates' | translate }}</h4>
-              <button type="button" class="close-btn" (click)="showCalendar = false">
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
-            
-            <app-availability-calendar
-              [selectedCheckIn]="checkInDate"
-              [selectedCheckOut]="checkOutDate"
-              (dateSelected)="onDateSelected($event)">
-            </app-availability-calendar>
-            
-            <div class="calendar-popup-footer">
-              <button type="button" class="btn-secondary" (click)="clearDates()">
-                {{ 'contact.form.clear_dates' | translate }}
-              </button>
-              <button type="button" class="btn-primary" (click)="confirmDates()">
-                {{ 'contact.form.confirm_dates' | translate }}
-              </button>
             </div>
           </div>
         </div>
@@ -145,6 +119,32 @@ import { AvailabilityCheckerService } from '../../api/availability/availability.
           </button>
         </div>
       </form>
+      
+      <!-- Calendar Popup (now outside the form) -->
+      <div *ngIf="showCalendar" class="calendar-overlay" (click)="closeCalendarOnOutsideClick($event)">
+        <div class="calendar-popup calendar-popup-top">
+          <div class="calendar-popup-header">
+            <button type="button" class="close-btn" (click)="showCalendar = false">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          
+          <app-availability-calendar
+            [selectedCheckIn]="checkInDate"
+            [selectedCheckOut]="checkOutDate"
+            (dateSelected)="onDateSelected($event)">
+          </app-availability-calendar>
+          
+          <div class="calendar-popup-footer">
+            <button type="button" class="btn-secondary" (click)="clearDates()">
+            <i class="fas fa-trash"></i>
+            </button>
+            <button type="button" class="btn-primary" (click)="confirmDates()">
+                        <i class="fas fa-thumbs-up"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   `,
   styles: [`
@@ -154,6 +154,7 @@ import { AvailabilityCheckerService } from '../../api/availability/availability.
       padding: var(--spacing-xl, 2rem);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
     }
     
     .alert {
@@ -325,37 +326,37 @@ import { AvailabilityCheckerService } from '../../api/availability/availability.
       color: var(--color-secondary, #6c757d);
     }
     
-    .calendar-popup {
-      position: absolute;
-      top: 100%;
+    /* Calendar Overlay - Full screen backdrop */
+    .calendar-overlay {
+      position: fixed;
+      top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      animation: fadeIn 0.2s ease;
+    }
+    
+    /* Calendar Popup - Now centered on screen */
+    .calendar-popup {
+      position: relative;
       width: 100%;
+      max-width: 600px;
       background-color: white;
       border-radius: var(--border-radius, 8px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      z-index: 100;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      z-index: 1001;
       padding: var(--spacing-lg, 1.5rem);
-      margin-top: var(--spacing-sm, 0.75rem);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      animation: fadeInUp 0.3s ease;
+      animation: zoomIn 0.3s ease;
     }
     
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .calendar-popup::before {
-      content: '';
-      position: absolute;
-      top: -8px;
-      left: 20px;
-      width: 16px;
-      height: 16px;
-      background-color: white;
-      transform: rotate(45deg);
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      border-left: 1px solid rgba(0, 0, 0, 0.1);
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
     
     .calendar-popup-header {
@@ -439,7 +440,6 @@ import { AvailabilityCheckerService } from '../../api/availability/availability.
       margin-top: var(--spacing-xl, 2rem);
     }
     
-    
     .submit-button {
       background-color: var(--color-accent, #D4B254);
       color: white;
@@ -491,6 +491,12 @@ import { AvailabilityCheckerService } from '../../api/availability/availability.
       
       .submit-button {
         width: 100%;
+      }
+      
+      .calendar-popup {
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
       }
     }
   `]
@@ -567,6 +573,13 @@ export class ContactFormComponent implements OnInit {
     const currentValue = this.contactForm.get('guests')?.value || 0;
     if (currentValue > 1) {
       this.contactForm.patchValue({ guests: currentValue - 1 });
+    }
+  }
+  
+  closeCalendarOnOutsideClick(event: MouseEvent) {
+    // Close the calendar if clicking outside the calendar popup
+    if ((event.target as HTMLElement).className === 'calendar-overlay') {
+      this.showCalendar = false;
     }
   }
   

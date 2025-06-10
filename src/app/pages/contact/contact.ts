@@ -58,14 +58,8 @@ import { ContactFormComponent } from '../../features/email-submission/ui/contact
           <div class="social-links">
             <h3>{{ 'contact.follow_us' | translate }}</h3>
             <div class="social-icons">
-              <a href="#" class="social-icon" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-              </a>
               <a href="#" class="social-icon" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="social-icon" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
               </a>
             </div>
           </div>
