@@ -6,6 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { AvailabilityCalendarComponent } from '../availability-calendar/availability-calendar';
 import { AvailabilityCheckerService } from '../../api/availability/availability.service';
+import { ContactFormData, EmailService } from '../../api/email/email.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -516,7 +517,7 @@ export class ContactFormComponent implements OnInit {
   
   constructor(
     private formBuilder: FormBuilder,
-    private http: HttpClient,
+    private emailService: EmailService,
     private availabilityChecker: AvailabilityCheckerService
   ) {}
   
@@ -583,7 +584,7 @@ export class ContactFormComponent implements OnInit {
     }
   }
   
-  onSubmit() {
+  async onSubmit() {
     this.formSubmitted = true;
     
     if (this.contactForm.invalid) {
@@ -608,50 +609,30 @@ export class ContactFormComponent implements OnInit {
           error: (error) => {
             console.error('Error checking availability:', error);
             // If there's an error checking availability, still try to submit
-            this.submitForm();
+             this.submitForm();
           }
         });
     } else {
       // No dates selected, just submit the form
-      this.submitForm();
+      await this.submitForm();
     }
   }
+
   
-  private submitForm() {
+  private async submitForm() {
     const formData = {
       ...this.contactForm.value,
       checkIn: this.checkInDate ? this.formatDate(this.checkInDate) : null,
       checkOut: this.checkOutDate ? this.formatDate(this.checkOutDate) : null
     };
     
+        const contactFormData = this.contactForm.value as ContactFormData;
+
     // Replace with your form submission logic
-    this.http.post('/api/contact', formData)
-      .subscribe({
-        next: () => {
-          this.isSubmitting = false;
-          this.formSuccess = true;
-          this.formError = false;
-          this.contactForm.reset({ guests: 2 });
-          this.checkInDate = null;
-          this.checkOutDate = null;
-          this.formSubmitted = false;
-          
-          // Reset form success message after 5 seconds
-          setTimeout(() => {
-            this.formSuccess = false;
-          }, 5000);
-        },
-        error: (error) => {
-          this.isSubmitting = false;
-          this.formError = true;
-          this.formSuccess = false;
-          this.errorMessage = error.message || 'Error submitting form. Please try again.';
-          
-          // Reset error message after 5 seconds
-          setTimeout(() => {
-            this.formError = false;
-          }, 5000);
-        }
-      });
+    await this.emailService.sendEmail(contactFormData).then((_) => {
+      this.isSubmitting=false;
+    }).catch((_e:any) => {
+      //#todo: catch ex
+    });
   }
 }
