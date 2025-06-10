@@ -164,6 +164,7 @@ Contains:
 API clients
 Request/response handlers
 Data transformation for API
+
 2. Model Segment
 Purpose: Contains business logic and data models.
 
@@ -179,6 +180,8 @@ Data models and types
 Business logic
 Constants and enums
 State management
+(Create class's as "class-name.model.ts" and handle BL there)
+
 3. UI Segment
 Purpose: Contains UI components specific to the slice.
 
@@ -193,6 +196,7 @@ Contains:
 Components
 Styles
 UI-specific logic
+
 4. Lib Segment
 Purpose: Contains utilities specific to the slice.
 
@@ -215,6 +219,7 @@ Cohesion: Related files stay together
 Discoverability: Easier to find all files related to a component
 Maintenance: Changes to a component affect files in the same directory
 Scalability: New components don't require changes to multiple directories
+
 2. Consistent Naming Conventions
 Rationale:
 
@@ -230,6 +235,7 @@ Locality: Changes to a component are localized
 Completeness: All aspects of a component are visible together
 Encapsulation: Components are self-contained
 Dependency Rules: Complete Rationale
+
 1. Unidirectional Dependencies
 Rationale:
 
@@ -237,6 +243,7 @@ Predictability: Changes in lower layers don't affect higher layers
 Stability: Lower layers are more stable than higher layers
 Testability: Components can be tested in isolation
 Maintainability: Prevents circular dependencies
+
 2. Specific Import Rules
 Rationale:
 

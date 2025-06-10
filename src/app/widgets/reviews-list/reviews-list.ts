@@ -36,6 +36,8 @@ import { Review } from '../../entities/review/model/review.model';
           <p>{{ review.comment }}</p>
         </div>
       </div>
+
+      
     </div>
   `,
   styleUrls: ['./reviews-list.scss']
