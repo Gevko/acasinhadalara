@@ -45,17 +45,54 @@ export class HomePageComponent {
       description: 'features.grill_desc'
     },
     {
+      icon: 'fas fa-champagne-glasses',
+      title: 'features.party_basement',
+      description: 'features.party_basement_desc'
+    },
+    {
       icon: 'fas fa-water',
       title: 'features.ocean_view',
       description: 'features.ocean_view_desc'
+    },
+        {
+      icon: 'fas fa-square-parking',
+      title: 'features.private_park',
+      description: 'features.private_park_desc'
     }
   ];
 
   highlights: Highlight[] = [
     { value: '3', label: 'home.rooms_count' },
     {value: '6', label: 'home.bathroomws_count'},
-    { value: '8', label: 'home.max_guests' },
+    { value: '8-10', label: 'home.max_guests' },
     { value: '320m²', label: 'home.house_size' },
     { value: '650m²', label: 'home.garden_size' }
+  ];
+
+    attractions = [
+    {
+      name: 'location.attractions.obidos.name',
+      description: 'location.attractions.obidos.description',
+      distance: 'location.attractions.obidos.distance',
+      image: '/images/obidos-1.jpg'
+    },
+    {
+      name: 'location.attractions.beach.name',
+      description: 'location.attractions.beach.description',
+      distance: 'location.attractions.beach.distance',
+      image: '/images/beach-2.jpg'
+    },
+    {
+      name: 'location.attractions.buddha.name',
+      description: 'location.attractions.buddha.description',
+      distance: 'location.attractions.buddha.distance',
+      image: '/images/budha-1.jpg'
+    },
+    {
+      name: 'location.attractions.lagoon.name',
+      description: 'location.attractions.lagoon.description',
+      distance: 'location.attractions.lagoon.distance',
+      image: '/images/beach-1.jpg'
+    }
   ];
 }

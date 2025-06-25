@@ -1,0 +1,171 @@
+<!-- src/app/features/events/events.html -->
+<div class="events-banner">
+  <div class="container">
+    <h1>{{ 'events.title' | translate }}</h1>
+  </div>
+</div>
+
+<section class="container events-overview">
+  <div class="events-description">
+    <h2>{{ 'events.about_events' | translate }}</h2>
+    <p>{{ 'events.events_description' | translate }}</p>
+    <p>{{ 'events.events_description2' | translate }}</p>
+    
+    <div class="events-highlights">
+      <div class="highlight">
+        <i class="fas fa-users"></i>
+        <h3>{{ 'events.capacity.title' | translate }}</h3>
+        <p>{{ 'events.capacity.description' | translate }}</p>
+      </div>
+      <!-- <div class="highlight">
+        <i class="fas fa-utensils"></i>
+        <h3>{{ 'events.catering.title' | translate }}</h3>
+        <p>{{ 'events.catering.description' | translate }}</p>
+      </div> -->
+      <div class="highlight">
+        <i class="fas fa-music"></i>
+        <h3>{{ 'events.amenities.title' | translate }}</h3>
+        <p>{{ 'events.amenities.description' | translate }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="events-image-gallery">
+    <img src="images/salon-3.jpg" alt="Event space setup">
+    <img src="images/pool-1.jpg" alt="Outdoor event area">
+  </div>
+</section>
+
+<section class="container event-types">
+  <h2>{{ 'events.event_types.title' | translate }}</h2>
+  
+  <div class="event-types-grid">
+    <div class="event-type-card">
+      <div class="event-type-icon">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <h3>{{ 'events.event_types.corporate.title' | translate }}</h3>
+      <p>{{ 'events.event_types.corporate.description' | translate }}</p>
+      <ul class="event-features">
+        <!-- <li>{{ 'events.event_types.corporate.feature1' | translate }}</li> -->
+        <li>{{ 'events.event_types.corporate.feature2' | translate }}</li>
+        <!-- <li>{{ 'events.event_types.corporate.feature3' | translate }}</li> -->
+      </ul>
+    </div>
+    
+    <div class="event-type-card">
+      <div class="event-type-icon">
+        <i class="fas fa-birthday-cake"></i>
+      </div>
+      <h3>{{ 'events.event_types.birthday.title' | translate }}</h3>
+      <p>{{ 'events.event_types.birthday.description' | translate }}</p>
+      <ul class="event-features">
+        <!-- <li>{{ 'events.event_types.birthday.feature1' | translate }}</li> -->
+        <li>{{ 'events.event_types.birthday.feature2' | translate }}</li>
+        <!-- <li>{{ 'events.event_types.birthday.feature3' | translate }}</li> -->
+      </ul>
+    </div>
+    
+    <div class="event-type-card">
+      <div class="event-type-icon">
+        <i class="fas fa-glass-cheers"></i>
+      </div>
+      <h3>{{ 'events.event_types.celebration.title' | translate }}</h3>
+      <p>{{ 'events.event_types.celebration.description' | translate }}</p>
+      <ul class="event-features">
+        <li>{{ 'events.event_types.celebration.feature1' | translate }}</li>
+        <!-- <li>{{ 'events.event_types.celebration.feature2' | translate }}</li>
+        <li>{{ 'events.event_types.celebration.feature3' | translate }}</li> -->
+      </ul>
+    </div>
+    
+    <!-- <div class="event-type-card">
+      <div class="event-type-icon">
+        <i class="fas fa-ring"></i>
+      </div>
+      <h3>{{ 'events.event_types.wedding.title' | translate }}</h3>
+      <p>{{ 'events.event_types.wedding.description' | translate }}</p>
+      <ul class="event-features">
+        <li>{{ 'events.event_types.wedding.feature1' | translate }}</li>
+        <li>{{ 'events.event_types.wedding.feature2' | translate }}</li>
+        <li>{{ 'events.event_types.wedding.feature3' | translate }}</li>
+      </ul>
+    </div> -->
+    
+    <div class="event-type-card">
+      <div class="event-type-icon">
+        <i class="fas fa-chalkboard-teacher"></i>
+      </div>
+      <h3>{{ 'events.event_types.workshop.title' | translate }}</h3>
+      <p>{{ 'events.event_types.workshop.description' | translate }}</p>
+      <ul class="event-features">
+        <li>{{ 'events.event_types.workshop.feature1' | translate }}</li>
+        <li>{{ 'events.event_types.workshop.feature2' | translate }}</li>
+        <li>{{ 'events.event_types.workshop.feature3' | translate }}</li>
+      </ul>
+    </div>
+    
+    <div class="event-type-card">
+      <div class="event-type-icon">
+        <i class="fas fa-camera"></i>
+      </div>
+      <h3>{{ 'events.event_types.photoshoot.title' | translate }}</h3>
+      <p>{{ 'events.event_types.photoshoot.description' | translate }}</p>
+      <ul class="event-features">
+        <li>{{ 'events.event_types.photoshoot.feature1' | translate }}</li>
+        <li>{{ 'events.event_types.photoshoot.feature2' | translate }}</li>
+        <li>{{ 'events.event_types.photoshoot.feature3' | translate }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="container event-facilities">
+  <h2>{{ 'events.facilities.title' | translate }}</h2>
+  
+  <div class="facilities-grid">
+    <div class="facility">
+      <i class="fas fa-wifi"></i>
+      <span>{{ 'events.facilities.wifi' | translate }}</span>
+    </div>
+    <div class="facility">
+      <i class="fas fa-parking"></i>
+      <span>{{ 'events.facilities.parking' | translate }}</span>
+    </div>
+    <div class="facility">
+      <i class="fas fa-swimming-pool"></i>
+      <span>{{ 'events.facilities.pool' | translate }}</span>
+    </div>
+    <div class="facility">
+      <i class="fas fa-volume-up"></i>
+      <span>{{ 'events.facilities.sound' | translate }}</span>
+    </div>
+    <div class="facility">
+      <i class="fas fa-temperature-low"></i>
+      <span>{{ 'events.facilities.ac' | translate }}</span>
+    </div>
+    <div class="facility">
+      <i class="fas fa-chair"></i>
+      <span>{{ 'events.facilities.furniture' | translate }}</span>
+    </div>
+    <div class="facility">
+      <i class="fas fa-lightbulb"></i>
+      <span>{{ 'events.facilities.lighting' | translate }}</span>
+    </div>
+    <div class="facility">
+      <i class="fas fa-utensils"></i>
+      <span>{{ 'events.facilities.kitchen' | translate }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="container event-cta">
+  <div class="cta-content">
+    <h2>{{ 'events.cta.title' | translate }}</h2>
+    <p>{{ 'events.cta.description' | translate }}</p>
+    <a [routerLink]="['/contact']" class="btn-primary">
+      <i class="fas fa-calendar-check"></i>
+      {{ 'events.cta.button' | translate }}
+    </a>
+  </div>
+</section> -->

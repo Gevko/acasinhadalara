@@ -10,6 +10,8 @@ export interface ContactFormData {
   checkOut?: string;
   guests?: number;
   message: string;
+  stayType?: string;
+  breakfast?: string;
 }
 
 @Injectable({
@@ -36,7 +38,7 @@ export class EmailService {
           checkIn: data.checkIn || 'Not specified',
           checkOut: data.checkOut || 'Not specified',
           guests: data.guests || 'Not specified',
-          message: data.message,
+          message: data.message + '. Especificações: Tipo de estadia' + data.stayType + ' Peq. Almoço: ' + data.breakfast,
           to_name: 'thehouseofgaeiras@gmail.com',
           from_name: 'thehouseofgaeiras@gmail.com',
         }

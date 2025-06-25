@@ -13,7 +13,7 @@ import { LanguageSwitcherComponent } from '../../shared/ui/language-switcher/lan
     <header class="header">
       <div class="container header-container">
         <div class="logo">
-          <a routerLink="/">Geairas House</a>
+          <a routerLink="/">Gaeiras House</a>
         </div>
         <nav class="nav-menu">
           <a routerLink="/" 
@@ -26,18 +26,13 @@ import { LanguageSwitcherComponent } from '../../shared/ui/language-switcher/lan
             {{ 'nav.house' | translate }}
           </a>
 
-  <a routerLink="/reviews" 
-     routerLinkActive="active">
-    {{ 'nav.reviews' | translate }}
-  </a>
-
           <a routerLink="/gallery" 
              routerLinkActive="active">
             {{ 'nav.gallery' | translate }}
           </a>
-          <a routerLink="/location" 
+          <a routerLink="/events" 
              routerLinkActive="active">
-            {{ 'nav.location' | translate }}
+            {{ 'events.title' | translate }}
           </a>
           <a routerLink="/contact" 
              routerLinkActive="active">

@@ -1,56 +1,61 @@
-<!-- src/app/features/contact/contact.html -->
-<div class="contact-banner">
-  <div class="container">
-    <h1>{{ 'contact.title' | translate }}</h1>
-  </div>
-</div>
-
-<section class="container contact-section">
-  <div class="contact-info">
-    <h2>{{ 'contact.get_in_touch' | translate }}</h2>
-    <p>{{ 'contact.description' | translate }}</p>
-
-    <div class="contact-methods">
-      <div class="contact-method">
-        <div class="contact-icon">
-          <i class="fas fa-envelope"></i>
-        </div>
-        <div class="contact-details">
-          <h3>{{ 'contact.email' | translate }}</h3>
-          <p>{{email}}</p>
-        </div>
-      </div>
-
-      <div class="contact-method">
-        <div class="contact-icon">
-          <i class="fas fa-phone"></i>
-        </div>
-        <div class="contact-details">
-          <h3>{{ 'contact.phone' | translate }}</h3>
-          <p>+351 938 141 667</p>
-          <p>+351 910 855 609</p>
-        </div>
-      </div>
-
-      <div class="contact-method">
-        <div class="contact-icon">
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <div class="contact-details">
-          <h3>{{ 'contact.address' | translate }}</h3>
-          <p>Gaeiras, Óbidos, Portugal</p>
-        </div>
+    <div class="contact-banner">
+      <div class="container">
+        <h1>{{ 'contact.title' | translate }}</h1>
       </div>
     </div>
 
-    <div class="social-media">
-      <h3>{{ 'contact.follow_us' | translate }}</h3>
-      <div class="social-icons">
-        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <app-location-map></app-location-map>
+
+    <section class="container contact-section" style="width:max-content">
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>{{ 'contact.get_in_touch' | translate }}</h2>
+          <p class="contact-description">{{ 'contact.description' | translate }}</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>{{ 'contact.email' | translate }}</h3>
+                <p><a href="mailto:{{ email }}">{{ email }}</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h3>{{ 'contact.phone' | translate }}</h3>
+                <p><a href="tel:+351938141667">{{ phone }}</a></p>
+                <p><a href="tel:+351910855609">{{ phone2 }}</a></p>
+
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>{{ 'contact.address' | translate }}</h3>
+                <p>{{ address }}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <h3>{{ 'contact.follow_us' | translate }}</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Instagram">
+                        <a href="https://www.facebook.com/profile.php?id=61577799744599" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <app-contact-form></app-contact-form>
       </div>
-    </div>
-  </div>
-    <app-contact-form></app-contact-form>
-</section>
+    </section>

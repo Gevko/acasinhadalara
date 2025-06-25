@@ -1,6 +1,6 @@
 {
-    "app": {
-    "title":"La casa cómoda de Gaeiras"
+  "app": {
+    "title": "La casa cómoda de Gaeiras"
   },
   "nav": {
     "home": "Inicio",
@@ -10,18 +10,19 @@
     "contact": "Contacto"
   },
   "home": {
-    "welcome": "Bienvenido a la cómoda Casa de Geairas",
+    "welcome": "Bienvenido a la cómoda Casa de Gaeiras",
     "subtitle": "Tu refugio perfecto en Portugal",
     "book_now": "Reservar Ahora",
     "features_title": "Características de la Casa",
     "overview_title": "Descripción General",
-    "overview_description": "Disfruta del lujo y la comodidad en nuestra espaciosa villa con impresionantes vistas al océano",
-    "bathroomws_count":"Baños","rooms_count": "Habitaciones",
+    "overview_description": "Descubra la Casa das Gaeiras, una villa espaciosa donde el confort se une a las vistas panorámicas al mar",
+    "bathroomws_count": "Baños",
+    "rooms_count": "Habitaciones",
     "max_guests": "Máx. Huéspedes",
     "house_size": "Tamaño de la Casa",
     "garden_size": "Tamaño del Jardín",
-    "ready_to_book": "¿Listo para Reservar?",
-    "book_description": "Contáctanos ahora para verificar la disponibilidad y hacer tu reserva para unas vacaciones inolvidables."
+    "ready_to_book": "¡Haga su reserva y disfrute de lo mejor que la costa tiene para ofrecer!",
+    "book_description": "¡Comodidad, privacidad y vistas inolvidables le esperan — contáctenos para verificar la disponibilidad para sus vacaciones!"
   },
   "features": {
     "rooms": "Habitaciones Confortables",
@@ -38,19 +39,17 @@
   "house": {
     "title": "La Casa",
     "overview_title": "Descripción General",
-    "overview_description": "La Casa Geairas es una hermosa villa de 3 habitaciones ubicada en la encantadora área de Gaeiras, Portugal. Con impresionantes vistas al océano y un exterior espacioso, es el refugio perfecto para familias y amigos.",
+    "overview_description": "La Casa Gaeiras es una hermosa villa de 3 habitaciones ubicada en la encantadora área de Gaeiras, Portugal. Con impresionantes vistas al océano y un exterior espacioso, es el refugio perfecto para familias y amigos.",
     "overview_description2": "La casa cuenta con comodidades modernas mientras mantiene un ambiente acogedor que te hará sentir como en casa durante tu estadía.",
     "exterior_title": "Espacios Exteriores",
     "rooms_title": "Habitaciones",
     "amenities_title": "Comodidades",
-    
     "master_bedroom": "Habitación Principal",
     "master_bedroom_desc": "Espaciosa habitación principal con baño privado y vistas al océano.",
     "second_bedroom": "Segunda Habitación",
     "second_bedroom_desc": "Cómoda habitación con cama queen-size y balcón privado.",
     "third_bedroom": "Tercera Habitación",
     "third_bedroom_desc": "Acogedora habitación con camas individuales, perfecta para niños o invitados.",
-    
     "features": {
       "ensuite": "Baño privado",
       "king_bed": "Cama king-size",
@@ -60,7 +59,10 @@
       "balcony": "Balcón privado",
       "garden_view": "Vista al jardín"
     },
-    
+    "main_salon_title": "Salón Principal",
+    "main_salon_desc": "Nuestro espacioso salón principal ofrece un espacio cómodo y elegante para relajarse y socializar con familia y amigos.",
+    "second_living_title": "Segunda Sala de Estar",
+    "second_living_desc": "La segunda sala de estar proporciona espacio adicional para entretenimiento y relajación, con comodidades modernas y mobiliario confortable.",
     "exterior": {
       "pool": "Piscina",
       "pool_desc": "Gran piscina privada con tumbonas y sombrillas.",
@@ -69,9 +71,12 @@
       "bbq": "Área de Barbacoa",
       "bbq_desc": "Barbacoa moderna con área de comedor al aire libre.",
       "garden": "Jardín",
-      "garden_desc": "Jardín paisajístico con plantas locales y áreas de relajación."
+      "garden_desc": "Jardín paisajístico con plantas locales y áreas de relajación.",
+      "party_basement": "Bodega para Eventos",
+      "party_basement_desc": "Un espacio ideal para fiestas, eventos privados o momentos especiales con total privacidad.",
+      "private_park": "Estacionamiento Privado",
+      "private_park_desc": "Seguridad y comodidad con estacionamiento privado en el lugar — sin preocupaciones durante su estadía"
     },
-    
     "amenities": {
       "wifi": "Wi-Fi Gratuito",
       "parking": "Estacionamiento Privado",
@@ -100,7 +105,6 @@
     "about_gaeiras": "Sobre Gaeiras",
     "gaeiras_description": "Gaeiras es una encantadora parroquia ubicada en el municipio de Óbidos, en la región Oeste del centro de Portugal. Esta pintoresca zona ofrece una perfecta combinación de tranquilidad rural y proximidad a hermosas playas.",
     "gaeiras_description2": "La zona es conocida por sus viñedos, huertos y paisajes impresionantes. Es una base ideal para explorar la histórica ciudad de Óbidos y las hermosas playas de la Costa de Plata.",
-    
     "airport_distance": {
       "title": "Aeropuerto",
       "description": "80km desde el Aeropuerto de Lisboa (aprox. 1 hora en coche)"
@@ -113,7 +117,6 @@
       "title": "Comodidades",
       "description": "2km a supermercados, restaurantes y cafés"
     },
-    
     "nearby_attractions": "Atracciones Cercanas",
     "attractions": {
       "obidos": {
@@ -137,7 +140,6 @@
         "distance": "12km (15 min en coche)"
       }
     },
-    
     "getting_here": "Cómo Llegar",
     "transport": {
       "plane": {
@@ -165,7 +167,6 @@
     "send_message": "Enviar Mensaje",
     "success_message": "¡Tu mensaje ha sido enviado con éxito! Nos pondremos en contacto contigo pronto.",
     "error_message": "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.",
-    
     "form": {
       "name": "Nombre",
       "email": "Email",
@@ -174,13 +175,19 @@
       "check_out": "Fecha de salida (opcional)",
       "guests": "Número de huéspedes (opcional)",
       "message": "Mensaje",
-      "submit": "Enviar Mensaje"
+      "submit": "Enviar Mensaje",
+      "stay_type": "Tipo de estancia",
+      "normal_stay": "Estancia normal",
+      "event_stay": "Evento",
+      "breakfast": "Desayuno incluido",
+      "breakfast_yes": "Sí, por favor",
+      "breakfast_no": "No, gracias"
     },
-    
     "errors": {
       "required": "Este campo es obligatorio",
       "email": "Por favor, introduce una dirección de email válida",
-      "invalid": "Por favor, introduce información válida"
+      "invalid": "Por favor, introduce información válida",
+      "stay_type_required": "Por favor, seleccione el tipo de estancia"
     }
   },
   "footer": {
@@ -189,5 +196,84 @@
     "contact": "Información de Contacto",
     "follow_us": "Síguenos",
     "rights": "Todos los Derechos Reservados"
+  },
+  "events": {
+    "title": "Eventos",
+    "about_events": "Sobre Nuestros Eventos",
+    "events_description": "Casa de Gaeiras es el lugar perfecto para sus eventos especiales. Ofrecemos un espacio versátil y encantador para eventos corporativos, fiestas de cumpleaños, talleres y más. Rodeado por la belleza natural de la región de Óbidos, nuestro lugar ofrece un ambiente tranquilo y exclusivo para cualquier ocasión.",
+    "events_description2": "Nuestra villa puede personalizarse completamente para satisfacer sus necesidades específicas.",
+    "capacity": {
+      "title": "Capacidad",
+      "description": "Espacio para hasta 50 invitados con opciones flexibles de configuración"
+    },
+    "catering": {
+      "title": "Servicio de Catering",
+      "description": "Opciones de catering personalizadas con los mejores productos locales"
+    },
+    "amenities": {
+      "title": "Comodidades",
+      "description": "Equipo audiovisual, WiFi de alta velocidad y área exterior privada"
+    },
+    "event_types": {
+      "title": "Tipos de Eventos",
+      "corporate": {
+        "title": "Eventos Corporativos",
+        "description": "El ambiente perfecto para reuniones de equipo, retiros corporativos y talleres empresariales.",
+        "feature1": "Sala de reuniones equipada",
+        "feature2": "Actividades de team building",
+        "feature3": "Paquetes de catering personalizados"
+      },
+      "birthday": {
+        "title": "Fiestas de Cumpleaños",
+        "description": "Celebre su cumpleaños en un ambiente exclusivo y memorable.",
+        "feature1": "Decoración personalizada",
+        "feature2": "Área de piscina para fiestas de verano",
+        "feature3": "Opciones de entretenimiento"
+      },
+      "celebration": {
+        "title": "Celebraciones Especiales",
+        "description": "Desde cenas familiares hasta reuniones de amigos, haga que cualquier ocasión sea especial.",
+        "feature1": "Ambiente acogedor y privado",
+        "feature2": "Opciones flexibles de menú",
+        "feature3": "Espacio interior y exterior"
+      },
+      "wedding": {
+        "title": "Bodas Íntimas",
+        "description": "El escenario perfecto para una boda pequeña y exclusiva.",
+        "feature1": "Ceremonia en el jardín",
+        "feature2": "Cena romántica",
+        "feature3": "Alojamiento para invitados"
+      },
+      "workshop": {
+        "title": "Talleres y Cursos",
+        "description": "Espacio inspirador para talleres creativos, cursos y retiros.",
+        "feature1": "Ambiente tranquilo e inspirador",
+        "feature2": "Configuraciones flexibles",
+        "feature3": "Equipo audiovisual"
+      },
+      "photoshoot": {
+        "title": "Sesiones Fotográficas",
+        "description": "Escenarios deslumbrantes para fotografía profesional y producciones.",
+        "feature1": "Diversos espacios y fondos",
+        "feature2": "Excelente luz natural",
+        "feature3": "Privacidad y exclusividad"
+      }
+    },
+    "facilities": {
+      "title": "Instalaciones y Servicios",
+      "wifi": "WiFi de Alta Velocidad",
+      "parking": "Estacionamiento Privado",
+      "pool": "Piscina",
+      "sound": "Sistema de Sonido y Video para Presentaciones",
+      "ac": "Aire Acondicionado",
+      "furniture": "Mobiliario para Eventos",
+      "lighting": "Iluminación Ambiental",
+      "kitchen": "Cocina Equipada"
+    },
+    "cta": {
+      "title": "Organice Su Evento Con Nosotros",
+      "description": "Contáctenos para verificar disponibilidad y discutir los detalles de su evento especial.",
+      "button": "Contáctenos"
+    }
   }
 }

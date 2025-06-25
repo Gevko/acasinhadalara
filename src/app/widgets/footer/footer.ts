@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
     <footer class="footer">
       <div class="container footer-content">
         <div class="footer-section">
-          <h3>Geairas House</h3>
+          <h3>Gaeiras House</h3>
           <p>{{ 'footer.description' | translate }}</p>
         </div>
         
@@ -22,7 +22,7 @@ import { RouterLink } from '@angular/router';
             <li><a routerLink="/">{{ 'nav.home' | translate }}</a></li>
             <li><a routerLink="/house">{{ 'nav.house' | translate }}</a></li>
             <li><a routerLink="/gallery">{{ 'nav.gallery' | translate }}</a></li>
-            <li><a routerLink="/location">{{ 'nav.location' | translate }}</a></li>
+            <li><a routerLink="/events">{{ 'events.title' | translate }}</a></li>
             <li><a routerLink="/contact">{{ 'nav.contact' | translate }}</a></li>
           </ul>
         </div>
@@ -57,7 +57,7 @@ import { RouterLink } from '@angular/router';
       
       <div class="footer-bottom">
         <div class="container">
-          <p>&copy; {{ currentYear }} Geairas House. {{ 'footer.rights' | translate }}</p>
+          <p>&copy; {{ currentYear }} Gaeiras House. {{ 'footer.rights' | translate }}</p>
         </div>
       </div>
     </footer>

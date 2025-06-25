@@ -13,7 +13,7 @@
   "reviews": {
     "title": "Guest Reviews",
     "guest_experiences": "Guest Experiences",
-    "description": "Read what our guests have to say about their stay at Geairas House, or leave your own review if you've stayed with us.",
+    "description": "Read what our guests have to say about their stay at Gaeiras House, or leave your own review if you've stayed with us.",
     "recent_reviews": "Recent Reviews",
     "leave_review": "Leave a Review",
     "loading": "Loading reviews...",
@@ -32,19 +32,19 @@
     }
   },
   "home": {
-    "welcome": "Welcome to the cozy House of Geairas",
+    "welcome": "Welcome to the cozy House of Gaeiras",
     "subtitle": "Your perfect getaway in Portugal",
     "book_now": "Book Now",
     "features_title": "House Features",
     "overview_title": "House Overview",
-    "overview_description": "Experience luxury and comfort in our spacious villa with stunning ocean views",
+    "overview_description": "Discover Casa das Gaeiras, a spacious villa where comfort meets panoramic sea views",
     "bathroomws_count": "Bathrooms",
     "rooms_count": "Bedrooms",
     "max_guests": "Max Guests",
     "house_size": "House Size",
     "garden_size": "Garden Size",
-    "ready_to_book": "Ready to Book Your Stay?",
-    "book_description": "Contact us now to check availability and make your reservation for an unforgettable vacation."
+    "ready_to_book": "Make your reservation and enjoy the best the coast has to offer!",
+    "book_description": "Comfort, privacy, and unforgettable views await you — contact us to check availability for your vacation!"
   },
   "features": {
     "rooms": "Comfortable Rooms",
@@ -56,12 +56,16 @@
     "grill": "BBQ Grill",
     "grill_desc": "Modern BBQ area for outdoor dining",
     "ocean_view": "Ocean View",
-    "ocean_view_desc": "Breathtaking ocean views from multiple areas"
+    "ocean_view_desc": "Breathtaking ocean views from multiple areas",
+    "party_basement": "Event Cellar/Venue",
+    "party_basement_desc": "An ideal space for parties, private events, or special moments with complete privacy",
+    "private_park": "Private Parking",
+    "private_park_desc": "Security and convenience with on-site private parking — worry-free during your stay"
   },
   "house": {
     "title": "The House",
     "overview_title": "House Overview",
-    "overview_description": "Geairas House is a beautiful 3-bedroom villa located in the charming area of Gaeiras, Portugal. With stunning ocean views and a spacious exterior, it's the perfect retreat for families and friends.",
+    "overview_description": "Gaeiras House is a beautiful 3-bedroom villa located in the charming area of Gaeiras, Portugal. With stunning ocean views and a spacious exterior, it's the perfect retreat for families and friends.",
     "overview_description2": "The house features modern amenities while maintaining a cozy atmosphere that will make you feel right at home during your stay.",
     "exterior_title": "Exterior Spaces",
     "rooms_title": "Bedrooms",
@@ -195,19 +199,105 @@
       "check_out": "Check-out Date (optional)",
       "guests": "Number of Guests (optional)",
       "message": "Message",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "stay_type": "Type of Stay",
+      "normal_stay": "Normal Stay",
+      "event_stay": "Event",
+      "breakfast": "Breakfast included",
+      "breakfast_yes": "Yes, please",
+      "breakfast_no": "No, thanks",
+      "errors": {
+        "stay_type_required": "Please select the type of stay",
+        "required": "This field is required",
+        "email": "Please enter a valid email address",
+        "invalid": "Please enter valid information"
+      }
     },
-    "errors": {
-      "required": "This field is required",
-      "email": "Please enter a valid email address",
-      "invalid": "Please enter valid information"
+    "footer": {
+      "description": "Your perfect getaway in Gaeiras, Portugal. Luxury villa with pool, jacuzzi, and ocean views.",
+      "quick_links": "Quick Links",
+      "contact": "Contact Info",
+      "follow_us": "Follow Us",
+      "rights": "All Rights Reserved"
     }
   },
-  "footer": {
-    "description": "Your perfect getaway in Gaeiras, Portugal. Luxury villa with pool, jacuzzi, and ocean views.",
-    "quick_links": "Quick Links",
-    "contact": "Contact Info",
-    "follow_us": "Follow Us",
-    "rights": "All Rights Reserved"
+  "events": {
+    "title": "Events",
+    "about_events": "About Our Events",
+    "events_description": "Casa de Gaeiras is the perfect venue for your special events. We offer a versatile and charming space for corporate events, birthday parties, workshops, and more. Surrounded by the natural beauty of the Óbidos region, our venue provides a peaceful and exclusive environment for any occasion.",
+    "events_description2": "Our villa can be completely customized to meet your specific needs.",
+    "capacity": {
+      "title": "Capacity",
+      "description": "Space for up to 50 guests with flexible configuration options"
+    },
+    "catering": {
+      "title": "Catering Service",
+      "description": "Customized catering options with the best local products"
+    },
+    "amenities": {
+      "title": "Amenities",
+      "description": "Audiovisual equipment, high-speed WiFi, and private outdoor area"
+    },
+    "event_types": {
+      "title": "Event Types",
+      "corporate": {
+        "title": "Corporate Events",
+        "description": "The perfect environment for team meetings, corporate retreats, and business workshops.",
+        "feature1": "Equipped meeting room",
+        "feature2": "Team building activities",
+        "feature3": "Custom catering packages"
+      },
+      "birthday": {
+        "title": "Birthday Parties",
+        "description": "Celebrate your birthday in an exclusive and memorable setting.",
+        "feature1": "Custom decoration",
+        "feature2": "Pool area for summer parties",
+        "feature3": "Entertainment options"
+      },
+      "celebration": {
+        "title": "Special Celebrations",
+        "description": "From family dinners to friend gatherings, make any occasion special.",
+        "feature1": "Cozy and private atmosphere",
+        "feature2": "Flexible menu options",
+        "feature3": "Indoor and outdoor space"
+      },
+      "wedding": {
+        "title": "Intimate Weddings",
+        "description": "The perfect setting for a small, exclusive wedding.",
+        "feature1": "Garden ceremony",
+        "feature2": "Romantic dinner",
+        "feature3": "Guest accommodation"
+      },
+      "workshop": {
+        "title": "Workshops and Courses",
+        "description": "Inspiring space for creative workshops, courses, and retreats.",
+        "feature1": "Peaceful and inspiring environment",
+        "feature2": "Flexible configurations",
+        "feature3": "Audiovisual equipment"
+      },
+      "photoshoot": {
+        "title": "Photo Sessions",
+        "description": "Stunning settings for professional photography and productions.",
+        "feature1": "Various spaces and backgrounds",
+        "feature2": "Excellent natural lighting",
+        "feature3": "Privacy and exclusivity"
+      }
+    },
+    "facilities": {
+      "title": "Facilities and Services",
+      "wifi": "High-Speed WiFi",
+      "parking": "Private Parking",
+      "pool": "Swimming Pool",
+      "sound": "Sound and Video System for Presentations",
+      "ac": "Air Conditioning",
+      "furniture": "Event Furniture",
+      "lighting": "Ambient Lighting",
+      "kitchen": "Equipped Kitchen"
+    },
+    "cta": {
+      "title": "Organize Your Event With Us",
+      "description": "Contact us to check availability and discuss the details of your special event.",
+      "button": "Contact Us"
+    }
   }
 }

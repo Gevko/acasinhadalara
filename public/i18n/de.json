@@ -10,19 +10,19 @@
     "contact": "Kontakt"
   },
   "home": {
-    "welcome": "Willkommen im Haus Geairas",
+    "welcome": "Willkommen im Haus Gaeiras",
     "subtitle": "Ihr perfekter Rückzugsort in Portugal",
     "book_now": "Jetzt Buchen",
     "features_title": "Hausmerkmale",
     "overview_title": "Überblick",
-    "overview_description": "Erleben Sie Luxus und Komfort in unserer geräumigen Villa mit atemberaubendem Meerblick",
+    "overview_description": "Entdecken Sie das Casa das Gaeiras, eine geräumige Villa, wo sich Komfort mit panoramischen Meerblicken verbindet",
     "bathroomws_count": "Badezimmer",
     "rooms_count": "Schlafzimmer",
     "max_guests": "Max. Gäste",
     "house_size": "Hausgröße",
     "garden_size": "Gartengröße",
-    "ready_to_book": "Bereit zu buchen?",
-    "book_description": "Kontaktieren Sie uns jetzt, um die Verfügbarkeit zu prüfen und Ihren unvergesslichen Urlaub zu buchen."
+    "ready_to_book": "Buchen Sie jetzt und genießen Sie das Beste, was die Küste zu bieten hat!",
+    "book_description": "Komfort, Privatsphäre und unvergessliche Ausblicke erwarten Sie — kontaktieren Sie uns, um die Verfügbarkeit für Ihren Urlaub zu prüfen!"
   },
   "features": {
     "rooms": "Komfortable Zimmer",
@@ -34,12 +34,16 @@
     "grill": "Grillplatz",
     "grill_desc": "Moderne Grillecke für Mahlzeiten im Freien",
     "ocean_view": "Meerblick",
-    "ocean_view_desc": "Atemberaubender Meerblick von verschiedenen Bereichen"
+    "ocean_view_desc": "Atemberaubender Meerblick von verschiedenen Bereichen",
+    "party_basement": "Eventkeller",
+    "party_basement_desc": "Ein idealer Raum für Feiern, private Veranstaltungen oder besondere Momente mit absoluter Privatsphäre",
+    "private_park": "Privatparkplatz",
+    "private_park_desc": "Sicherheit und Komfort mit privatem Parkplatz vor Ort — sorgenfreier Aufenthalt"
   },
   "house": {
     "title": "Das Haus",
     "overview_title": "Überblick",
-    "overview_description": "Das Haus Geairas ist eine wunderschöne Villa mit 3 Schlafzimmern in der charmanten Gegend von Gaeiras, Portugal. Mit atemberaubendem Meerblick und einem geräumigen Außenbereich ist es der perfekte Rückzugsort für Familien und Freunde.",
+    "overview_description": "Das Haus Gaeiras ist eine wunderschöne Villa mit 3 Schlafzimmern in der charmanten Gegend von Gaeiras, Portugal. Mit atemberaubendem Meerblick und einem geräumigen Außenbereich ist es der perfekte Rückzugsort für Familien und Freunde.",
     "overview_description2": "Das Haus bietet moderne Annehmlichkeiten und bewahrt gleichzeitig eine gemütliche Atmosphäre, die Sie sich während Ihres Aufenthalts wie zu Hause fühlen lässt.",
     "exterior_title": "Außenbereiche",
     "rooms_title": "Schlafzimmer",
@@ -50,6 +54,10 @@
     "second_bedroom_desc": "Komfortables Schlafzimmer mit Doppelbett und privatem Balkon.",
     "third_bedroom": "Drittes Schlafzimmer",
     "third_bedroom_desc": "Gemütliches Schlafzimmer mit Einzelbetten, perfekt für Kinder oder Gäste.",
+    "main_salon_title": "Hauptsalon",
+    "main_salon_desc": "Unser geräumiger Hauptsalon bietet einen komfortablen und eleganten Raum zum Entspannen und geselligen Beisammensein mit Familie und Freunden.",
+    "second_living_title": "Zweites Wohnzimmer",
+    "second_living_desc": "Der zweite Wohnbereich bietet zusätzlichen Raum für Unterhaltung und Entspannung mit modernen Annehmlichkeiten und komfortabler Einrichtung.",
     "features": {
       "ensuite": "Eigenes Badezimmer",
       "king_bed": "Kingsize-Bett",
@@ -167,12 +175,19 @@
       "check_out": "Abreisedatum (optional)",
       "guests": "Anzahl der Gäste (optional)",
       "message": "Nachricht",
-      "submit": "Nachricht senden"
+      "submit": "Nachricht senden",
+      "stay_type": "Art des Aufenthalts",
+      "normal_stay": "Normaler Aufenthalt",
+      "event_stay": "Veranstaltung",
+      "breakfast": "Frühstück inbegriffen",
+      "breakfast_yes": "Ja, bitte",
+      "breakfast_no": "Nein, danke"
     },
     "errors": {
       "required": "Dieses Feld ist erforderlich",
       "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-      "invalid": "Bitte geben Sie gültige Informationen ein"
+      "invalid": "Bitte geben Sie gültige Informationen ein",
+      "stay_type_required": "Bitte wählen Sie die Art des Aufenthalts"
     }
   },
   "footer": {
@@ -181,5 +196,84 @@
     "contact": "Kontaktinfo",
     "follow_us": "Folgen Sie uns",
     "rights": "Alle Rechte vorbehalten"
+  },
+   "events": {
+    "title": "Veranstaltungen",
+    "about_events": "Über unsere Veranstaltungen",
+    "events_description": "Das Casa de Gaeiras ist der perfekte Ort für Ihre besonderen Veranstaltungen. Wir bieten einen vielseitigen und charmanten Raum für Firmenveranstaltungen, Geburtstagsfeiern, Workshops und vieles mehr. Umgeben von der natürlichen Schönheit der Region Óbidos bietet unser Veranstaltungsort eine ruhige und exklusive Umgebung für jeden Anlass.",
+    "events_description2": "Unsere Villa kann vollständig an Ihre spezifischen Bedürfnisse angepasst werden.",
+    "capacity": {
+      "title": "Kapazität",
+      "description": "Platz für bis zu 50 Gäste mit flexiblen Konfigurationsoptionen"
+    },
+    "catering": {
+      "title": "Catering-Service",
+      "description": "Maßgeschneiderte Catering-Optionen mit den besten lokalen Produkten"
+    },
+    "amenities": {
+      "title": "Ausstattung",
+      "description": "Audiovisuelle Ausrüstung, Hochgeschwindigkeits-WLAN und privater Außenbereich"
+    },
+    "event_types": {
+      "title": "Veranstaltungsarten",
+      "corporate": {
+        "title": "Firmenveranstaltungen",
+        "description": "Die perfekte Umgebung für Teammeetings, Firmenretreats und Business-Workshops.",
+        "feature1": "Ausgestatteter Konferenzraum",
+        "feature2": "Teambuilding-Aktivitäten",
+        "feature3": "Individuelle Verpflegungspakete"
+      },
+      "birthday": {
+        "title": "Geburtstagsfeiern",
+        "description": "Feiern Sie Ihren Geburtstag in einer exklusiven und unvergesslichen Umgebung.",
+        "feature1": "Individuelle Dekoration",
+        "feature2": "Poolbereich für Sommerfeste",
+        "feature3": "Unterhaltungsoptionen"
+      },
+      "celebration": {
+        "title": "Besondere Feiern",
+        "description": "Von Familienessen bis hin zu Freundestreffen - machen Sie jeden Anlass zu etwas Besonderem.",
+        "feature1": "Gemütliche und private Atmosphäre",
+        "feature2": "Flexible Menüoptionen",
+        "feature3": "Innen- und Außenbereich"
+      },
+      "wedding": {
+        "title": "Intime Hochzeiten",
+        "description": "Die perfekte Kulisse für eine kleine, exklusive Hochzeit.",
+        "feature1": "Gartenzeremonie",
+        "feature2": "Romantisches Dinner",
+        "feature3": "Unterbringung für Gäste"
+      },
+      "workshop": {
+        "title": "Workshops und Kurse",
+        "description": "Inspirierender Raum für kreative Workshops, Kurse und Retreats.",
+        "feature1": "Ruhige und inspirierende Umgebung",
+        "feature2": "Flexible Einrichtung",
+        "feature3": "Audiovisuelle Ausstattung"
+      },
+      "photoshoot": {
+        "title": "Fotoshootings",
+        "description": "Atemberaubende Kulissen für professionelle Fotografie und Produktionen.",
+        "feature1": "Verschiedene Räume und Hintergründe",
+        "feature2": "Hervorragendes natürliches Licht",
+        "feature3": "Privatsphäre und Exklusivität"
+      }
+    },
+    "facilities": {
+      "title": "Einrichtungen und Services",
+      "wifi": "Hochgeschwindigkeits-WLAN",
+      "parking": "Privater Parkplatz",
+      "pool": "Schwimmbad",
+      "sound": "Sound- und Videosystem für Präsentationen",
+      "ac": "Klimaanlage",
+      "furniture": "Veranstaltungsmöbel",
+      "lighting": "Ambiente-Beleuchtung",
+      "kitchen": "Ausgestattete Küche"
+    },
+    "cta": {
+      "title": "Organisieren Sie Ihre Veranstaltung mit uns",
+      "description": "Kontaktieren Sie uns, um die Verfügbarkeit zu prüfen und die Details Ihrer besonderen Veranstaltung zu besprechen.",
+      "button": "Kontaktieren Sie uns"
+    }
   }
 }

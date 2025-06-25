@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Location } from './location';
+import { Location } from './events';
 
 describe('Location', () => {
   let component: Location;
