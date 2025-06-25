@@ -13,7 +13,7 @@ import { LanguageSwitcherComponent } from '../../shared/ui/language-switcher/lan
     <header class="header">
       <div class="container header-container">
         <div class="logo">
-          <a routerLink="/">Gaeiras House</a>
+          <a routerLink="/">Villa Gaeiras</a>
         </div>
         <nav class="nav-menu">
           <a routerLink="/" 

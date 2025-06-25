@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "The cozy house of Gaeiras"
+    "title": "Villa Gaeiras"
   },
   "nav": {
     "home": "Home",
@@ -32,12 +32,12 @@
     }
   },
   "home": {
-    "welcome": "Welcome to the cozy House of Gaeiras",
+    "welcome": "Welcome to Villa Gaeiras",
     "subtitle": "Your perfect getaway in Portugal",
     "book_now": "Book Now",
     "features_title": "House Features",
     "overview_title": "House Overview",
-    "overview_description": "Discover Casa das Gaeiras, a spacious villa where comfort meets panoramic sea views",
+    "overview_description": "Discover Villa Gaeiras, a spacious villa where comfort meets panoramic sea views",
     "bathroomws_count": "Bathrooms",
     "rooms_count": "Bedrooms",
     "max_guests": "Max Guests",
@@ -65,7 +65,7 @@
   "house": {
     "title": "The House",
     "overview_title": "House Overview",
-    "overview_description": "Gaeiras House is a beautiful 3-bedroom villa located in the charming area of Gaeiras, Portugal. With stunning ocean views and a spacious exterior, it's the perfect retreat for families and friends.",
+    "overview_description": "Villa Gaeiras is a beautiful 3-bedroom villa located in the charming area of Gaeiras, Portugal. With stunning ocean views and a spacious exterior, it's the perfect retreat for families and friends.",
     "overview_description2": "The house features modern amenities while maintaining a cozy atmosphere that will make you feel right at home during your stay.",
     "exterior_title": "Exterior Spaces",
     "rooms_title": "Bedrooms",
@@ -224,7 +224,7 @@
   "events": {
     "title": "Events",
     "about_events": "About Our Events",
-    "events_description": "Casa de Gaeiras is the perfect venue for your special events. We offer a versatile and charming space for corporate events, birthday parties, workshops, and more. Surrounded by the natural beauty of the Óbidos region, our venue provides a peaceful and exclusive environment for any occasion.",
+    "events_description": "Villa Gaeiras is the perfect venue for your special events. We offer a versatile and charming space for corporate events, birthday parties, workshops, and more. Surrounded by the natural beauty of the Óbidos region, our venue provides a peaceful and exclusive environment for any occasion.",
     "events_description2": "Our villa can be completely customized to meet your specific needs.",
     "capacity": {
       "title": "Capacity",

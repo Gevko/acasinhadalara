@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "La casa cómoda de Gaeiras"
+    "title": "La Villa Gaeiras"
   },
   "nav": {
     "home": "Inicio",
@@ -10,12 +10,12 @@
     "contact": "Contacto"
   },
   "home": {
-    "welcome": "Bienvenido a la cómoda Casa de Gaeiras",
+    "welcome": "Bienvenido a la cómoda Villa Gaeiras",
     "subtitle": "Tu refugio perfecto en Portugal",
     "book_now": "Reservar Ahora",
     "features_title": "Características de la Casa",
     "overview_title": "Descripción General",
-    "overview_description": "Descubra la Casa das Gaeiras, una villa espaciosa donde el confort se une a las vistas panorámicas al mar",
+    "overview_description": "Descubra la Villa Gaeiras, una villa espaciosa donde el confort se une a las vistas panorámicas al mar",
     "bathroomws_count": "Baños",
     "rooms_count": "Habitaciones",
     "max_guests": "Máx. Huéspedes",
@@ -39,8 +39,8 @@
   "house": {
     "title": "La Casa",
     "overview_title": "Descripción General",
-    "overview_description": "La Casa Gaeiras es una hermosa villa de 3 habitaciones ubicada en la encantadora área de Gaeiras, Portugal. Con impresionantes vistas al océano y un exterior espacioso, es el refugio perfecto para familias y amigos.",
-    "overview_description2": "La casa cuenta con comodidades modernas mientras mantiene un ambiente acogedor que te hará sentir como en casa durante tu estadía.",
+    "overview_description": "La Vila Gaeiras es una hermosa villa de 3 habitaciones ubicada en la encantadora área de Gaeiras, Portugal. Con impresionantes vistas al océano y un exterior espacioso, es el refugio perfecto para familias y amigos.",
+    "overview_description2": "La vila cuenta con comodidades modernas mientras mantiene un ambiente acogedor que te hará sentir como en casa durante tu estadía.",
     "exterior_title": "Espacios Exteriores",
     "rooms_title": "Habitaciones",
     "amenities_title": "Comodidades",
@@ -200,7 +200,7 @@
   "events": {
     "title": "Eventos",
     "about_events": "Sobre Nuestros Eventos",
-    "events_description": "Casa de Gaeiras es el lugar perfecto para sus eventos especiales. Ofrecemos un espacio versátil y encantador para eventos corporativos, fiestas de cumpleaños, talleres y más. Rodeado por la belleza natural de la región de Óbidos, nuestro lugar ofrece un ambiente tranquilo y exclusivo para cualquier ocasión.",
+    "events_description": "Villa Gaeiras es el lugar perfecto para sus eventos especiales. Ofrecemos un espacio versátil y encantador para eventos corporativos, fiestas de cumpleaños, talleres y más. Rodeado por la belleza natural de la región de Óbidos, nuestro lugar ofrece un ambiente tranquilo y exclusivo para cualquier ocasión.",
     "events_description2": "Nuestra villa puede personalizarse completamente para satisfacer sus necesidades específicas.",
     "capacity": {
       "title": "Capacidad",

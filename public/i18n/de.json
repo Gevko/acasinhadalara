@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Das behagliche Haus von Gaeiras"
+    "title": "Das behagliche Villa Gaeiras"
   },
   "nav": {
     "home": "Startseite",
@@ -10,12 +10,12 @@
     "contact": "Kontakt"
   },
   "home": {
-    "welcome": "Willkommen im Haus Gaeiras",
+    "welcome": "Willkommen im Villa Gaeiras",
     "subtitle": "Ihr perfekter Rückzugsort in Portugal",
     "book_now": "Jetzt Buchen",
     "features_title": "Hausmerkmale",
     "overview_title": "Überblick",
-    "overview_description": "Entdecken Sie das Casa das Gaeiras, eine geräumige Villa, wo sich Komfort mit panoramischen Meerblicken verbindet",
+    "overview_description": "Entdecken Sie das Villa Gaeiras, eine geräumige Villa, wo sich Komfort mit panoramischen Meerblicken verbindet",
     "bathroomws_count": "Badezimmer",
     "rooms_count": "Schlafzimmer",
     "max_guests": "Max. Gäste",
@@ -43,7 +43,7 @@
   "house": {
     "title": "Das Haus",
     "overview_title": "Überblick",
-    "overview_description": "Das Haus Gaeiras ist eine wunderschöne Villa mit 3 Schlafzimmern in der charmanten Gegend von Gaeiras, Portugal. Mit atemberaubendem Meerblick und einem geräumigen Außenbereich ist es der perfekte Rückzugsort für Familien und Freunde.",
+    "overview_description": "Das Villa Gaeiras ist eine wunderschöne Villa mit 3 Schlafzimmern in der charmanten Gegend von Gaeiras, Portugal. Mit atemberaubendem Meerblick und einem geräumigen Außenbereich ist es der perfekte Rückzugsort für Familien und Freunde.",
     "overview_description2": "Das Haus bietet moderne Annehmlichkeiten und bewahrt gleichzeitig eine gemütliche Atmosphäre, die Sie sich während Ihres Aufenthalts wie zu Hause fühlen lässt.",
     "exterior_title": "Außenbereiche",
     "rooms_title": "Schlafzimmer",
@@ -200,7 +200,7 @@
    "events": {
     "title": "Veranstaltungen",
     "about_events": "Über unsere Veranstaltungen",
-    "events_description": "Das Casa de Gaeiras ist der perfekte Ort für Ihre besonderen Veranstaltungen. Wir bieten einen vielseitigen und charmanten Raum für Firmenveranstaltungen, Geburtstagsfeiern, Workshops und vieles mehr. Umgeben von der natürlichen Schönheit der Region Óbidos bietet unser Veranstaltungsort eine ruhige und exklusive Umgebung für jeden Anlass.",
+    "events_description": "Das Villa Gaeiras ist der perfekte Ort für Ihre besonderen Veranstaltungen. Wir bieten einen vielseitigen und charmanten Raum für Firmenveranstaltungen, Geburtstagsfeiern, Workshops und vieles mehr. Umgeben von der natürlichen Schönheit der Region Óbidos bietet unser Veranstaltungsort eine ruhige und exklusive Umgebung für jeden Anlass.",
     "events_description2": "Unsere Villa kann vollständig an Ihre spezifischen Bedürfnisse angepasst werden.",
     "capacity": {
       "title": "Kapazität",
