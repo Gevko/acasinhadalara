@@ -143,11 +143,16 @@ this.contactForm = this.formBuilder.group({
     
     const contactFormData = this.contactForm.value as ContactFormData;
 
-    contactFormData.checkIn = formData.checkin;
+    contactFormData.checkIn = formData.checkIn;
     contactFormData.checkOut = formData.checkOut;
 
 
-    // Replace with your form submission logic
+    console.log(contactFormData);
+    // console.log('checkIN:', this.checkInDate);
+    // console.log('checkOUT:', this.checkOutDate);
+    //        this.isSubmitting=false;
+
+    // // Replace with your form submission logic
      await this.emailService.sendEmail(contactFormData).then((_) => {
        this.isSubmitting=false;
      }).catch((_e:any) => {
