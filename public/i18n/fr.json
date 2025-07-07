@@ -188,6 +188,10 @@
       "email": "Veuillez entrer une adresse email valide",
       "invalid": "Veuillez entrer des informations valides",
       "stay_type_required": "Veuillez sélectionner le type de séjour"
+    },
+    "notifications": {
+      "contact_submitted_title": "Contact Envoyé",
+      "contact_submitted_message": "Merci pour votre message. Nous vous répondrons prochainement."
     }
   },
   "footer": {

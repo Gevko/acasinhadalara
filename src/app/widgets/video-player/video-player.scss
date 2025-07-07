@@ -1,0 +1,12 @@
+
+    iframe {
+      max-width: 100%;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;  /* or specify a height */
+      width: 100%;
+      padding: 20px;
+    }

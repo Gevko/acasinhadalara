@@ -6,6 +6,7 @@ import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideToastr } from 'ngx-toastr';
 
 // Configure the loader to look in the public/i18n folder
 export function HttpLoaderFactory(http: HttpClient) {
@@ -19,6 +20,11 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     provideAnimations(),
+        provideToastr({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
     importProvidersFrom(
       HttpClientModule,
       TranslateModule.forRoot({

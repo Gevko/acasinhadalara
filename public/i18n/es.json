@@ -188,6 +188,10 @@
       "email": "Por favor, introduce una dirección de email válida",
       "invalid": "Por favor, introduce información válida",
       "stay_type_required": "Por favor, seleccione el tipo de estancia"
+    },
+    "notifications": {
+      "contact_submitted_title": "Contacto Enviado",
+      "contact_submitted_message": "Gracias por su mensaje. Le responderemos en breve."
     }
   },
   "footer": {

@@ -188,6 +188,10 @@
       "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
       "invalid": "Bitte geben Sie gültige Informationen ein",
       "stay_type_required": "Bitte wählen Sie die Art des Aufenthalts"
+    },
+    "notifications": {
+      "contact_submitted_title": "Kontakt Übermittelt",
+      "contact_submitted_message": "Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden."
     }
   },
   "footer": {
@@ -197,7 +201,7 @@
     "follow_us": "Folgen Sie uns",
     "rights": "Alle Rechte vorbehalten"
   },
-   "events": {
+  "events": {
     "title": "Veranstaltungen",
     "about_events": "Über unsere Veranstaltungen",
     "events_description": "Das Villa Gaeiras ist der perfekte Ort für Ihre besonderen Veranstaltungen. Wir bieten einen vielseitigen und charmanten Raum für Firmenveranstaltungen, Geburtstagsfeiern, Workshops und vieles mehr. Umgeben von der natürlichen Schönheit der Region Óbidos bietet unser Veranstaltungsort eine ruhige und exklusive Umgebung für jeden Anlass.",

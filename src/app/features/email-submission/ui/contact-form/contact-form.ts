@@ -2,11 +2,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { AvailabilityCalendarComponent } from '../availability-calendar/availability-calendar';
 import { AvailabilityCheckerService } from '../../api/availability/availability.service';
 import { ContactFormData, EmailService } from '../../api/email/email.service';
+import { NotificationService } from '../../../../shared/api/notification/notification.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
@@ -23,91 +25,94 @@ export class ContactFormComponent implements OnInit {
   errorMessage = '';
   isSubmitting = false;
   showCalendar = false;
-  
+
   // Temporary storage for calendar selection
   checkInDate: Date | null = null;
   checkOutDate: Date | null = null;
-  
+
   constructor(
-    private formBuilder: FormBuilder,
-    private emailService: EmailService,
-    private availabilityChecker: AvailabilityCheckerService
-  ) {}
-  
+    private readonly formBuilder: FormBuilder,
+    private readonly emailService: EmailService,
+    private readonly availabilityChecker: AvailabilityCheckerService,
+    private readonly notificationService: NotificationService,
+    private readonly translateService: TranslateService,
+    private readonly router: Router
+  ) { }
+
   ngOnInit() {
-this.contactForm = this.formBuilder.group({
-  stayType: ['normal', [Validators.required]],
-  name: ['', [Validators.required]],
-  email: ['', [Validators.required, Validators.email]],
-  phone: [''],
-  guests: [2, [Validators.min(1)]],
-  breakfast: ['yes'],
-  message: ['', [Validators.required]]
-});
+    this.contactForm = this.formBuilder.group({
+      stayType: ['normal', [Validators.required]],
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: [''],
+      guests: [2, [Validators.min(1)]],
+      breakfast: ['yes'],
+      message: ['', [Validators.required]]
+    });
   }
-  
+
   getErrorMessage(fieldName: string): string {
     const field = this.contactForm.get(fieldName);
     if (!field) return '';
-    
+
     if (field.hasError('required')) {
       return 'contact.errors.required';
     }
-    
+
     if (field.hasError('email')) {
       return 'contact.errors.email';
     }
-    
+
     return 'contact.errors.invalid';
   }
-  
+
   onDateSelected(event: { checkIn: Date | null, checkOut: Date | null }) {
     this.checkInDate = event.checkIn;
     this.checkOutDate = event.checkOut;
   }
-  
+
   clearDates() {
     this.checkInDate = null;
     this.checkOutDate = null;
   }
-  
+
   confirmDates() {
     this.showCalendar = false;
   }
-  
+
   formatDate(date: Date | null): string {
     if (!date) return '';
     return date.toLocaleDateString();
   }
-  
+
   incrementGuests() {
     const currentValue = this.contactForm.get('guests')?.value || 0;
     this.contactForm.patchValue({ guests: currentValue + 1 });
   }
-  
+
   decrementGuests() {
     const currentValue = this.contactForm.get('guests')?.value || 0;
     if (currentValue > 1) {
       this.contactForm.patchValue({ guests: currentValue - 1 });
     }
   }
-  
+
   closeCalendarOnOutsideClick(event: MouseEvent) {
     // Close the calendar if clicking outside the calendar popup
     if ((event.target as HTMLElement).className === 'calendar-overlay') {
       this.showCalendar = false;
     }
   }
-  
+
   async onSubmit() {
     this.formSubmitted = true;
-    
+
     if (this.contactForm.invalid) {
       return;
     }
-    
+
     this.isSubmitting = true;
-    
+
     // Check availability if dates are selected
     if (this.checkInDate && this.checkOutDate) {
       this.availabilityChecker.checkAvailability(this.checkInDate, this.checkOutDate)
@@ -124,7 +129,7 @@ this.contactForm = this.formBuilder.group({
           error: (error) => {
             console.error('Error checking availability:', error);
             // If there's an error checking availability, still try to submit
-             this.submitForm();
+            this.submitForm();
           }
         });
     } else {
@@ -133,30 +138,45 @@ this.contactForm = this.formBuilder.group({
     }
   }
 
-  
+
   private async submitForm() {
     const formData = {
       ...this.contactForm.value,
       checkIn: this.checkInDate ? this.formatDate(this.checkInDate) : null,
       checkOut: this.checkOutDate ? this.formatDate(this.checkOutDate) : null
     };
-    
+
     const contactFormData = this.contactForm.value as ContactFormData;
 
     contactFormData.checkIn = formData.checkIn;
     contactFormData.checkOut = formData.checkOut;
 
 
-    console.log(contactFormData);
-    // console.log('checkIN:', this.checkInDate);
-    // console.log('checkOUT:', this.checkOutDate);
-    //        this.isSubmitting=false;
-
     // // Replace with your form submission logic
-     await this.emailService.sendEmail(contactFormData).then((_) => {
-       this.isSubmitting=false;
-     }).catch((_e:any) => {
-       //#todo: catch ex
-     });
+    await this.emailService.sendEmail(contactFormData).then((_) => {
+      this.isSubmitting = false;
+      this.notifyUser();
+      this.navigateToSentUrl();
+    }).catch((_e: any) => {
+      //#todo: catch ex
+    });
+  }
+
+  private notifyUser(): void {
+    this.translateService.get([
+      'contact.notifications.contact_submitted_title',
+      'contact.notifications.contact_submitted_message'
+    ]).subscribe((result) => {
+      this.notificationService.success(
+        result['contact.notifications.contact_submitted_title'],
+        result['contact.notifications.contact_submitted_message'],
+      )
+    });
+  }
+
+  private navigateToSentUrl(): void {
+    this.router.navigate(['/contact/message-sent'], {
+      replaceUrl: true // This prevents the back button from going back to the form
+    });
   }
 }

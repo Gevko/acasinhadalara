@@ -1,6 +1,8 @@
 // src/styles.scss
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
+@import 'ngx-toastr/toastr';
+
 // Variables
 :root {
   // Colors based on the wood house lodge theme
@@ -204,3 +206,4 @@ p {
 body.no-scroll {
   overflow: hidden;
 }
+

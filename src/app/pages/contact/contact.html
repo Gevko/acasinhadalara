@@ -1,61 +1,70 @@
-    <div class="contact-banner">
-      <div class="container">
-        <h1>{{ 'contact.title' | translate }}</h1>
+<div class="contact-banner">
+  <div class="container">
+    <h1>{{ 'contact.title' | translate }}</h1>
+  </div>
+</div>
+
+<app-location-map></app-location-map>
+
+<section class="container contact-section" style="width:max-content">
+  <div class="contact-content">
+    <div class="contact-info">
+      <h2>{{ 'contact.get_in_touch' | translate }}</h2>
+      <p class="contact-description">{{ 'contact.description' | translate }}</p>
+
+      <div class="contact-methods">
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h3>{{ 'contact.email' | translate }}</h3>
+            <p><a href="mailto:{{ email }}">{{ email }}</a></p>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-details">
+            <h3>{{ 'contact.phone' | translate }}</h3>
+            <p><a href="tel:+351938141667">{{ phone }}</a></p>
+            <p><a href="tel:+351910855609">{{ phone2 }}</a></p>
+
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h3>{{ 'contact.address' | translate }}</h3>
+            <p>{{ address }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <h3>{{ 'contact.follow_us' | translate }}</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <a href="https://www.facebook.com/people/Villa-Gaeiras/61578084564717" class="social-icon"><i
+                class="fab fa-facebook-f"></i></a>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <a href="https://www.instagram.com/villa_gaeiras" class="social-icon">
+              <i class="fab fa-instagram"></i></a>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <a href="https://www.youtube.com/watch?v=rTnSz6AJk-0" class="social-icon">
+              <i class="fab fa-youtube"></i></a>
+          </a>
+        </div>
       </div>
     </div>
 
-    <app-location-map></app-location-map>
-
-    <section class="container contact-section" style="width:max-content">
-      <div class="contact-content">
-        <div class="contact-info">
-          <h2>{{ 'contact.get_in_touch' | translate }}</h2>
-          <p class="contact-description">{{ 'contact.description' | translate }}</p>
-          
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h3>{{ 'contact.email' | translate }}</h3>
-                <p><a href="mailto:{{ email }}">{{ email }}</a></p>
-              </div>
-            </div>
-            
-            <div class="contact-method">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="contact-details">
-                <h3>{{ 'contact.phone' | translate }}</h3>
-                <p><a href="tel:+351938141667">{{ phone }}</a></p>
-                <p><a href="tel:+351910855609">{{ phone2 }}</a></p>
-
-              </div>
-            </div>
-            
-            <div class="contact-method">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact-details">
-                <h3>{{ 'contact.address' | translate }}</h3>
-                <p>{{ address }}</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="social-links">
-            <h3>{{ 'contact.follow_us' | translate }}</h3>
-            <div class="social-icons">
-              <a href="#" class="social-icon" aria-label="Instagram">
-                        <a href="https://www.facebook.com/profile.php?id=61577799744599" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <app-contact-form></app-contact-form>
-      </div>
-    </section>
+    <app-contact-form></app-contact-form>
+  </div>
+</section>

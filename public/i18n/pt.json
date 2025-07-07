@@ -187,6 +187,10 @@
       "email": "Por favor, insira um endereço de email válido",
       "invalid": "Por favor, insira informações válidas",
       "stay_type_required": "Por favor, selecione o tipo de estadia"
+    },
+    "notifications": {
+      "contact_submitted_title": "Contacto Submetido",
+      "contact_submitted_message": "Agradecemos o seu contacto. Responderemos brevemente."
     }
   },
   "footer": {

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
+import { VideoPlayerComponent } from '../../widgets/video-player/video-player';
 
 interface Feature {
   icon: string;
@@ -18,7 +19,7 @@ interface Highlight {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, TranslateModule, RouterLink],
+  imports: [CommonModule, TranslateModule, RouterLink, VideoPlayerComponent],
   templateUrl:'./home.html',
   styleUrls: ['./home.scss']
 })
